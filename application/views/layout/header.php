@@ -109,25 +109,28 @@
                                                     <a href="about.html">Home</a>
                                                 </li>
                                                 <li class="menu-item-has-children">
-                                                    <a href="#">Program Studi</a>
+                                                    <a href="#">Profil</a>
                                                     <ul class="sub-menu">
-                                                        <li><a href="software-development.html">Sekilas S1
-                                                                Informatika</a>
+                                                        <li><a href="software-development.html">Sejarah</a>
                                                         </li>
                                                         <li><a href="web-development.html">Visi & Misi</a> </li>
-                                                        <li><a href="analytic-solutions.html">Kurikulum</a>
-                                                        </li>
-                                                        <li><a href="cloud-and-devops.html">RPS Prodi</a></li>
-                                                        <li><a href="cloud-and-devops.html">Capaian Pembelajaran</a>
-                                                        </li>
+                                                        <li><a href="product-design.html">Struktur Organisasi</a></li>
                                                         <li class="menu-item-has-children">
-                                                            <a href="#">Sumber Daya Manusia</a>
+                                                            <a href="#">Manajemen</a>
                                                             <ul class="sub-menu">
-                                                                <li><a href="services1.html">Dosen</a></li>
-                                                                <li><a href="services2.html">Mahasiswa</a></li>
+                                                                <li><a href="services1.html">Program Kerja</a></li>
+                                                                <li><a href="services2.html">Rencana Kerja</a></li>
                                                             </ul>
                                                         </li>
-                                                        <li><a href="product-design.html">Struktur Organisasi</a></li>
+                                                        <li class="menu-item-has-children">
+                                                            <a href="#">SDM</a>
+                                                            <ul class="sub-menu">
+                                                                <li><a href="">Tendik</a></li>
+                                                                <li><a href="">Dosen</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="product-design.html">Fasilitas</a></li>
+                                                        <li><a href="product-design.html">Akreditasi</a></li>
                                                     </ul>
                                                 </li>
                                                 <li class="menu-item-has-children">
@@ -135,14 +138,81 @@
                                                     <ul class="sub-menu">
                                                         <li><a href="services1.html">Berita</a></li>
                                                         <li><a href="services2.html">Pengumuman</a></li>
-                                                        <li><a href="services3.html">Akademik</a></li>
+                                                        <!-- <li><a href="services3.html">Akademik</a></li> -->
                                                         <li><a href="services3.html">Surat Edaran</a></li>
                                                     </ul>
                                                 </li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="blog.html">Dokumen</a>
+                                                <!-- <li class="menu-item-has-children">
+                                                    <a href="blog.html">Akademik</a>
                                                     <ul class="sub-menu">
                                                         <li><a href="services1.html">Dinamis DB</a></li>
+                                                    </ul>
+                                                </li> -->
+                                                <li class="rs-mega-menu menu-item-has-children"> <a href="#">Akademik</a>
+                                                    <ul class="mega-menu">
+                                                        <li class="mega-menu-container" style="background-color: white;">
+                                                            <div class="mega-menu-innner" style="background-color: white;">
+                                                                <div class="single-megamenu" style="background-color: white;">
+                                                                    <img src="<?= base_url('assets/front/logo/informatika.png') ?>" width="100%" class="mt-3" alt="">
+                                                                    <ul class="sub-menu">
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="single-megamenu">
+                                                                    <ul class="sub-menu" style="background-color: white;">
+                                                                        <li class="menu-title">Administratif</li>
+                                                                        <li><a href="index8.html">Sistem Pendidikan</a></li>
+                                                                        <li><a href="index9.html">Kalender Akademik</a></li>
+                                                                        <li><a href="index10.html">Jadwal Kuliah</a></li>
+                                                                        <li><a href="index10.html">MBKM</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="single-megamenu">
+                                                                    <ul class="sub-menu">
+                                                                        <li class="menu-title">Prosedur Akademik</li>
+                                                                        <li><a href="onepage1.html">Daftar Ulang & KRS</a></li>
+                                                                        <li><a href="onepage2.html">Transkrip Akademik</a></li>
+                                                                        <li><a href="onepage3.html">Praktek Kerja Lapangan</a></li>
+                                                                        <li><a href="onepage4.html">Cuti</a></li>
+                                                                        <li><a href="onepage5.html">Seminar & Sidang Skripsi</a></li>
+                                                                        <li><a href="onepage6.html">Yudisium</a></li>
+                                                                        <li><a href="onepage6.html">Wisuda</a></li>
+                                                                        <li class="last-item"><a href="onepage7.html">Dukumen Akademik</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="single-megamenu">
+                                                                    <ul class="sub-menu">
+                                                                        <li class="menu-title">SDM</li>
+                                                                        <li><a href="onepage8.html">Data Mahasiswa</a></li>
+                                                                        <li class="last-item"><a href="onepage14.html">Data Alumni</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul> <!-- //.mega-menu -->
+                                                </li>
+                                                <li class="menu-item-has-children">
+                                                    <a href="#">Penelitian & Publikasi</a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="software-development.html">Sejarah</a>
+                                                        </li>
+                                                        <li><a href="web-development.html">Visi & Misi</a> </li>
+                                                        <li><a href="product-design.html">Struktur Organisasi</a></li>
+                                                        <li class="menu-item-has-children">
+                                                            <a href="#">Manajemen</a>
+                                                            <ul class="sub-menu">
+                                                                <li><a href="services1.html">Program Kerja</a></li>
+                                                                <li><a href="services2.html">Rencana Kerja</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="menu-item-has-children">
+                                                            <a href="#">SDM</a>
+                                                            <ul class="sub-menu">
+                                                                <li><a href="">Tendik</a></li>
+                                                                <li><a href="">Dosen</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="product-design.html">Fasilitas</a></li>
+                                                        <li><a href="product-design.html">Akreditasi</a></li>
                                                     </ul>
                                                 </li>
                                                 <li>
