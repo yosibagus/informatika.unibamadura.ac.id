@@ -88,7 +88,7 @@
                 <!-- Topbar Area End -->
                 <!-- Menu Start -->
                 <div class="menu-area menu-sticky">
-                    <div class="container">
+                    <div class="container-fluid">
                         <div class="row align-items-center">
                             <div class="col-lg-3">
                                 <div class="logo-part">
@@ -142,12 +142,6 @@
                                                         <li><a href="services3.html">Surat Edaran</a></li>
                                                     </ul>
                                                 </li>
-                                                <!-- <li class="menu-item-has-children">
-                                                    <a href="blog.html">Akademik</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="services1.html">Dinamis DB</a></li>
-                                                    </ul>
-                                                </li> -->
                                                 <li class="rs-mega-menu menu-item-has-children"> <a href="#">Akademik</a>
                                                     <ul class="mega-menu">
                                                         <li class="mega-menu-container" style="background-color: white;">
@@ -191,29 +185,48 @@
                                                     </ul> <!-- //.mega-menu -->
                                                 </li>
                                                 <li class="menu-item-has-children">
-                                                    <a href="#">Penelitian & Publikasi</a>
+                                                    <a href="#">Penelitian & Pengabdian</a>
                                                     <ul class="sub-menu">
-                                                        <li><a href="software-development.html">Sejarah</a>
+                                                        <li><a href="software-development.html">Pengabdian Masyarakat</a>
                                                         </li>
-                                                        <li><a href="web-development.html">Visi & Misi</a> </li>
-                                                        <li><a href="product-design.html">Struktur Organisasi</a></li>
-                                                        <li class="menu-item-has-children">
-                                                            <a href="#">Manajemen</a>
-                                                            <ul class="sub-menu">
-                                                                <li><a href="services1.html">Program Kerja</a></li>
-                                                                <li><a href="services2.html">Rencana Kerja</a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li class="menu-item-has-children">
-                                                            <a href="#">SDM</a>
-                                                            <ul class="sub-menu">
-                                                                <li><a href="">Tendik</a></li>
-                                                                <li><a href="">Dosen</a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li><a href="product-design.html">Fasilitas</a></li>
-                                                        <li><a href="product-design.html">Akreditasi</a></li>
+                                                        <li><a href="web-development.html">Panduan Penelitian & Pengabdian</a> </li>
                                                     </ul>
+                                                </li>
+                                                <li class="rs-mega-menu menu-item-has-children"> <a href="#">Kemahasiswaan</a>
+                                                    <ul class="mega-menu">
+                                                        <li class="mega-menu-container" style="background-color: white;">
+                                                            <div class="mega-menu-innner" style="background-color: white;">
+                                                                <div class="single-megamenu text-center" style="background-color: white;">
+                                                                    <img src="<?= base_url('assets/front/logo/informatika.png') ?>" width="50%" class="mt-4" alt="">
+                                                                    <ul class="sub-menu">
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="single-megamenu">
+                                                                    <ul class="sub-menu" style="background-color: white;">
+                                                                        <li class="menu-title">Informasi</li>
+                                                                        <li><a href="index8.html">Informasi Beasiswa</a></li>
+                                                                        <li><a href="index9.html">Informasi Yudisium</a></li>
+                                                                        <li><a href="index10.html">Informasi Wisuda</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="single-megamenu">
+                                                                    <ul class="sub-menu">
+                                                                        <li class="menu-title">Prestasi & PMB</li>
+                                                                        <li><a href="index10.html">Prestasi Mahasiswa</a></li>
+                                                                        <li><a href="onepage1.html">Penerimaan Mahasiswa Baru</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="single-megamenu">
+                                                                    <ul class="sub-menu">
+                                                                        <li class="menu-title">ORMAWA</li>
+                                                                        <li><a href="onepage8.html">Kegiatan Mahasiswa</a></li>
+                                                                        <li><a href="onepage8.html">HIMAIF</a></li>
+                                                                        <!-- <li class="last-item"><a href="onepage14.html">Data Alumni</a></li> -->
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul> <!-- //.mega-menu -->
                                                 </li>
                                                 <li>
                                                     <a href="contact.html">Kontak</a>
