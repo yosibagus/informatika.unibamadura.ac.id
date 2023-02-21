@@ -4,38 +4,24 @@
 <head>
     <!-- meta tag -->
     <meta charset="utf-8">
-    <title>Informatika - UNIBA Madura</title>
+    <title><?= $title ?> &raquo; Informatika | UNIBA Madura</title>
     <meta name="description" content="">
     <!-- responsive tag -->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- favicon -->
     <link rel="apple-touch-icon" href="apple-touch-icon.html">
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('assets/front/') ?>logo/informatika.png">
-    <!-- Bootstrap v4.4.1 css -->
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/front/') ?>css/bootstrap.min.css">
-    <!-- font-awesome css -->
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/front/') ?>css/font-awesome.min.css">
-    <!-- flaticon css -->
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/front/') ?>fonts/flaticon.css">
-    <!-- animate css -->
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/front/') ?>css/animate.css">
-    <!-- owl.carousel css -->
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/front/') ?>css/owl.carousel.css">
-    <!-- slick css -->
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/front/') ?>css/slick.css">
-    <!-- off canvas css -->
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/front/') ?>css/off-canvas.css">
-    <!-- magnific popup css -->
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/front/') ?>css/magnific-popup.css">
-    <!-- Main Menu css -->
     <link rel="stylesheet" href="<?= base_url('assets/front/') ?>css/rsmenu-main.css">
-    <!-- spacing css -->
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/front/') ?>css/rs-spacing.css">
-    <!-- style css -->
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/front/style.css') ?>">
-    <!-- This stylesheet dynamically changed from style.less -->
-    <!-- responsive css -->
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/front/') ?>css/responsive.css">
     <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -106,40 +92,39 @@
                                         <nav class="rs-menu pr-100 lg-pr-50 md-pr-0">
                                             <ul class="nav-menu">
                                                 <li>
-                                                    <a href="about.html">Home</a>
+                                                    <a href="<?= base_url() ?>">Home</a>
                                                 </li>
                                                 <li class="menu-item-has-children">
                                                     <a href="#">Profil</a>
                                                     <ul class="sub-menu">
-                                                        <li><a href="software-development.html">Sejarah</a>
+                                                        <li><a href="<?= base_url('profil/sejarah') ?>">Sejarah</a>
                                                         </li>
-                                                        <li><a href="web-development.html">Visi & Misi</a> </li>
-                                                        <li><a href="product-design.html">Struktur Organisasi</a></li>
+                                                        <li><a href="<?= base_url('profil/visi_misi') ?>">Visi & Misi</a> </li>
+                                                        <li><a href="<?= base_url('profil/struktur_organisasi') ?>">Struktur Organisasi</a></li>
                                                         <li class="menu-item-has-children">
                                                             <a href="#">Manajemen</a>
                                                             <ul class="sub-menu">
-                                                                <li><a href="services1.html">Program Kerja</a></li>
-                                                                <li><a href="services2.html">Rencana Kerja</a></li>
+                                                                <li><a href="<?= base_url('profil/manajemen/proker') ?>">Program Kerja</a></li>
+                                                                <li><a href="<?= base_url('profil/manajemen/raker') ?>">Rencana Kerja</a></li>
                                                             </ul>
                                                         </li>
                                                         <li class="menu-item-has-children">
                                                             <a href="#">SDM</a>
                                                             <ul class="sub-menu">
-                                                                <li><a href="">Tendik</a></li>
-                                                                <li><a href="">Dosen</a></li>
+                                                                <li><a href="<?= base_url('profil/sdm/tendik') ?>">Tendik</a></li>
+                                                                <li><a href="<?= base_url('profil/sdm/dosen') ?>">Dosen</a></li>
                                                             </ul>
                                                         </li>
-                                                        <li><a href="product-design.html">Fasilitas</a></li>
-                                                        <li><a href="product-design.html">Akreditasi</a></li>
+                                                        <li><a href="<?= base_url('profil/fasilitas') ?>">Fasilitas</a></li>
+                                                        <li><a href="<?= base_url('profil/akreditasi') ?>">Akreditasi</a></li>
                                                     </ul>
                                                 </li>
                                                 <li class="menu-item-has-children">
                                                     <a href="blog.html">Informasi</a>
                                                     <ul class="sub-menu">
-                                                        <li><a href="services1.html">Berita</a></li>
-                                                        <li><a href="services2.html">Pengumuman</a></li>
-                                                        <!-- <li><a href="services3.html">Akademik</a></li> -->
-                                                        <li><a href="services3.html">Surat Edaran</a></li>
+                                                        <li><a href="<?= base_url('informasi/berita') ?>">Berita</a></li>
+                                                        <li><a href="<?= base_url('informasi/pengumuman') ?>">Pengumuman</a></li>
+                                                        <li><a href="<?= base_url('informasi/surat_edaran') ?>">Surat Edaran</a></li>
                                                     </ul>
                                                 </li>
                                                 <li class="rs-mega-menu menu-item-has-children"> <a href="#">Akademik</a>

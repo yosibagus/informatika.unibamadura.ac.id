@@ -40,43 +40,25 @@
  <!-- Services Section Start -->
  <div class="rs-services main-home style1 pt-100 md-pt-70">
      <div class="container">
-         <div class="row">
+         <div class="row justify-content-center">
              <div class="col-md-6 md-mb-30">
                  <div class="services-item">
                      <div class="services-icon">
                          <div class="image-part">
-                             <img src="<?= base_url('assets/front/') ?>images/services/style1/1.png" style="width: 50px; height: 50px;" alt="">
+                             <img src="<?= base_url('assets/front/logo/informatika.png') ?>" style="width: 50px; height: 50px;" alt="">
                          </div>
                      </div>
                      <div class="services-content">
                          <div class="services-text">
-                             <h3 class="services-title"><a href="web-development.html">Visi</a></h3>
+                             <h3 class="services-title"><a href="web-development.html">#InformatikaKuatFSTUNIBAHebat</a></h3>
                          </div>
                          <div class="services-desc">
-                             <p> Quisque placerat vitae lacus ut scelerisque fusce luctus odio ac nibh luctu.
-                             </p>
+
                          </div>
                      </div>
                  </div>
              </div>
-             <div class="col-md-6">
-                 <div class="services-item">
-                     <div class="services-icon">
-                         <div class="image-part">
-                             <img src="<?= base_url('assets/front/') ?>images/services/style1/1.png" style="width: 50px; height: 50px;" alt="">
-                         </div>
-                     </div>
-                     <div class="services-content">
-                         <div class="services-text">
-                             <h3 class="services-title"><a href="web-development.html">Misi</a></h3>
-                         </div>
-                         <div class="services-desc">
-                             <p> Quisque placerat vitae lacus ut scelerisque fusce luctus odio ac nibh luctu.
-                             </p>
-                         </div>
-                     </div>
-                 </div>
-             </div>
+
          </div>
      </div>
  </div>
