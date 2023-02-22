@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-lg-8 md-mb-50">
                 <div class="services-img">
-                    <img src="assets/images/services/single/1.jpg" alt="">
+                    <img src="<?= base_url('assets/foto/sejarah/rekom.jpg') ?>" width="80%" alt="">
                 </div>
                 <h2 class="mt-34">Tonggak Awal Berdirinya Informatika</h2>
                 <p style="text-align: justify">
