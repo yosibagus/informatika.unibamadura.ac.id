@@ -30,6 +30,7 @@
 
                             <th class="sort align-middle ps-4" scope="col" data-sort="category" style="width:150px;">CATEGORY</th>
                             <th class="sort align-middle ps-4" scope="col" data-sort="vendor" style="width:200px;">VENDOR</th>
+                            <th class="sort align-middle ps-4" scope="col" data-sort="vendor" style="width:200px;">JUMLAH SUB</th>
                             <th class="sort align-middle ps-4" scope="col" data-sort="time" style="width:50px;">PUBLISHED ON</th>
                             <th class="sort text-end align-middle pe-0 ps-4" scope="col"></th>
                         </tr>
@@ -46,18 +47,13 @@
 
 <script>
     $(document).ready(function() {
-        tampil_data();
-
-        function tampil_data() {
-            $.ajax({
-                url: "<?= base_url('core/kategori_data'); ?>",
-                async: false,
-                dataType: 'html',
-                success: function(data) {
-                    $("#tmp-kategori").html(data);
-                }
-            })
-        }
+        $.ajax({
+            url: "<?= base_url('core/kategori_data'); ?>",
+            dataType: 'html',
+            success: function(data) {
+                $("#tmp-kategori").html(data);
+            }
+        })
 
     })
 </script>

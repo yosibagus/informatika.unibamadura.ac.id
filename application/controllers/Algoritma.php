@@ -28,11 +28,6 @@ class Algoritma extends CI_Controller
     {
         $this->load->view('admin/kategori/kategori_tambah');
     }
-
-    public function coba()
-    {
-        $this->load->view('template/coba');
-    }
 }
 
 /* End of file Admin.php and path \application\controllers\Admin.php */

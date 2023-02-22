@@ -140,6 +140,16 @@
 <!-- main js -->
 <script src="<?= base_url('assets/front/') ?>js/main.js"></script>
 <script src="<?= base_url('assets/front/core.js') ?>"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.13.2/datatables.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#tableStruktur').DataTable({
+            paging: false,
+            // ordering: false,
+            // info: false,
+        });
+    });
+</script>
 </body>
 
 </html>

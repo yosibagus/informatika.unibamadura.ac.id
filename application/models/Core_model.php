@@ -12,6 +12,12 @@ class Core_model extends CI_Model
     {
         return $this->db->get('master_kategori');
     }
+
+    public function getDetailKategori($id)
+    {
+        $this->db->where('id_kategori', $id);
+        return $this->db->get('master_kategori');
+    }
 }
 
 

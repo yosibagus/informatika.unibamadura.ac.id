@@ -7,6 +7,7 @@ class Page extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('User_model', 'muser');
     }
 
     public function index()
@@ -24,8 +25,9 @@ class Page extends CI_Controller
     {
         $data['title'] = "Sejarah";
         $data['deskripsi'] = "Sejarah Informatika UNIBA Madura";
+        $data['kategori'] = $this->muser->getKategori()->result_array();
         $this->load->view('layout/header', $data);
-        $this->load->view('user/profil/sejarah/sejarah');
+        $this->load->view('user/profil/sejarah/sejarah', $data);
         $this->load->view('layout/footer');
     }
 
@@ -33,6 +35,7 @@ class Page extends CI_Controller
     {
         $data['title'] = "Visi & Misi";
         $data['deskripsi'] = "Visi Misi Informatika UNIBA Madura";
+        $data['kategori'] = $this->muser->getKategori()->result_array();
         $this->load->view('layout/header', $data);
         $this->load->view('user/profil/visi_misi/visi_misi');
         $this->load->view('layout/footer');
@@ -42,8 +45,10 @@ class Page extends CI_Controller
     {
         $data['title'] = "Struktur Organisasi";
         $data['deskripsi'] = "Struktur Organisasi Informatika UNIBA Madura";
+        $data['struktur'] = $this->muser->getStrukturOrganisasi()->result_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
         $this->load->view('layout/header', $data);
-        $this->load->view('user/profil/struktur_organisasi/struktur_organisasi');
+        $this->load->view('user/profil/struktur_organisasi/struktur_organisasi', $data);
         $this->load->view('layout/footer');
     }
 
@@ -78,8 +83,10 @@ class Page extends CI_Controller
     {
         $data['title'] = "Dosen";
         $data['deskripsi'] = "Dosen Informatika UNIBA Madura";
+        $data['dosen'] = $this->muser->getDosen()->result_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
         $this->load->view('layout/header', $data);
-        $this->load->view('user/profil/sdm/dosen');
+        $this->load->view('user/profil/sdm/dosen', $data);
         $this->load->view('layout/footer');
     }
 
