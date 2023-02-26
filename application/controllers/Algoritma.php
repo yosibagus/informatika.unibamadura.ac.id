@@ -28,6 +28,16 @@ class Algoritma extends CI_Controller
     {
         $this->load->view('admin/kategori/kategori_tambah');
     }
+
+    public function single_blog()
+    {
+        $this->load->view('admin/single/single_blog');
+    }
+
+    public function blog_tambah()
+    {
+        $this->load->view('admin/single/blog_tambah');
+    }
 }
 
 /* End of file Admin.php and path \application\controllers\Admin.php */

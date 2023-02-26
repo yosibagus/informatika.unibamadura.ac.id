@@ -76,6 +76,34 @@ class Core extends CI_Controller
             </tr>';
         }
     }
+
+    public function blog_tambah()
+    {
+        $config['upload_path']          = './assets/foto/upload/';
+        $config['allowed_types']        = 'gif|jpg|png|pdf';
+        $config['max_width']            = 5024;
+
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload('file_blog')) {
+            $data = array('error' => $this->upload->display_errors());
+        } else {
+            $data = $this->upload->data();
+            $input = [
+                'judul_blog' => $this->input->post('judul_blog'),
+                'sub_blog' => $this->input->post('sub_judul'),
+                'deskripsi_blog' => $this->input->post('deskripsi_blog'),
+                'file_blog' => $data['file_name'],
+                'tipe_file' => $data['file_ext'],
+                'ukuran_file' => $data['file_size'],
+                'publish_blog' => 1
+            ];
+            $this->db->insert('master_blog', $input);
+        }
+
+        // echo json_encode($data);
+        echo json_encode($data);
+    }
 }
 
 /* End of file Core.php and path \application\controllers\Core.php */

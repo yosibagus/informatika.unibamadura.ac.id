@@ -34,7 +34,7 @@
     <link href="<?= base_url('assets/back/') ?>assets/css/theme.min.css" type="text/css" rel="stylesheet" id="style-default">
     <link href="<?= base_url('assets/back/') ?>assets/css/user.min.css" type="text/css" rel="stylesheet" id="user-style-default">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
     <style>
         #vanillatoasts-container {
             position: fixed;
@@ -120,6 +120,13 @@
                                     </div>
                                 </span>
                             </li>
+                            <div class="nav-item-wrapper"><a class="nav-link label-1" href="<?= base_url('algoritma/#/single_blog') ?>" role="button" data-bs-toggle="" aria-expanded="false">
+                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor">
+                                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                                            </svg></span><span class="nav-link-text-wrapper"><span class="nav-link-text">Single Blog</span></span></div>
+                                </a></div>
                         </ul>
                     </div>
                 </div>
