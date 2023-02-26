@@ -15,11 +15,11 @@
         <div class="row">
             <div class="col-lg-8 md-mb-50">
                 <div class="services-img">
-                    <img src="<?= base_url('assets/foto/sejarah/rekom.jpg') ?>" width="80%" alt="">
+                    <img src="<?= base_url('assets/foto/upload/') . $sejarah['file_blog'] ?>" width="80%" alt="">
                 </div>
-                <h2 class="mt-34">Tonggak Awal Berdirinya Informatika</h2>
+                <h2 class="mt-34"><?= $sejarah['sub_blog'] ?></h2>
                 <p style="text-align: justify">
-                    Perguruan tinggi mempunyai tiga tugas utama yang tertuang dalam tri dharma perguruan tinggi yaitu Pendidikan dan Pengajaran, Penelitian, dan Pengabdian kepada Masyarakat. Oleh karena itu, perguruan tinggi merupakan lembaga yang mengembangkan kualitas sumber daya manusia yang holistik komprehensif, yang meliputi hard skill dan soft skill, sebagai wujud dari pendidikan karakter (character building). Dalam rangka memperkuat dan membangun karakter civitas akademika di lingkungan Program Studi Informatika, pimpinan membuat pernyataan mutu sebagai motivasi dan pembentukan karakter dalam mengembangkan Program Studi Informatika, yaitu: “Informatika Kuat, FST UNIBA Hebat” sebagai penguatan pelaksanaan tugas dan tanggung jawab oleh setiap unsur yang ada. #InformatikaKuatFSTUNIBAHebat dijadikan sebagai tag line untuk merepresentasikan identitas visi dan misi pimpinan Program Studi Informatika dalam masa bakti empat tahun yang akan datang.
+                    <?= $sejarah['deskripsi_blog'] ?>
                 </p>
             </div>
             <div class="col-lg-4 pl-32 md-pl-15">

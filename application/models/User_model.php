@@ -8,6 +8,11 @@ class User_model extends CI_Model
         return $this->db->get('master_kategori');
     }
 
+    public function getSingleBlog($id)
+    {
+        return $this->db->get_where('master_blog', ['id_blog' => $id]);
+    }
+
     public function getStrukturOrganisasi()
     {
         return $this->db->query("SELECT * FROM master_dosen where jabatan != 'Dosen' and jabatan != 'Asisten Dosen'");

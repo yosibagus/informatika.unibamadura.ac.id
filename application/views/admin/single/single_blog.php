@@ -20,28 +20,41 @@
                 </div>
             </div>
         </div>
-        <div class="mx-n4 px-4 mx-lg-n6 px-lg-6 bg-white border-top border-bottom border-200 position-relative top-1">
-            <div class="table-responsive scrollbar mx-n1 px-1">
-                <table class="table fs--1 mb-0">
-                    <thead>
-                        <tr>
-                            <th class="white-space-nowrap fs--1 align-middle" style="max-width:20px; width:18px;">
-                                No
-                            </th>
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive scrollbar mx-n1 px-1">
+                    <table class="table fs--1 mb-0">
+                        <thead>
+                            <tr>
+                                <th class="white-space-nowrap fs--1 align-middle" style="max-width:20px; width:18px;">No</th>
+                                <th class="sort align-middle ps-4" scope="col" data-sort="category" style="width:150px;">Judul</th>
+                                <th class="sort align-middle ps-4" scope="col" data-sort="category" style="width:150px;">Sub Judul</th>
+                                <th class="sort align-middle ps-4" scope="col" data-sort="vendor" style="width:200px;">Deskripsi</th>
+                                <th class="sort align-middle ps-4" scope="col" data-sort="vendor" style="width:200px;">Gambar</th>
+                                <th class="sort align-middle ps-4" scope="col" data-sort="time" style="width:50px;">Publish</th>
+                                <th class="sort text-end align-middle pe-0 ps-4" scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="list" id="tmp-blog">
 
-                            <th class="sort align-middle ps-4" scope="col" data-sort="category" style="width:150px;">Judul</th>
-                            <th class="sort align-middle ps-4" scope="col" data-sort="category" style="width:150px;">Sub Judul</th>
-                            <th class="sort align-middle ps-4" scope="col" data-sort="vendor" style="width:200px;">Deskripsi</th>
-                            <th class="sort align-middle ps-4" scope="col" data-sort="vendor" style="width:200px;">Gambar</th>
-                            <th class="sort align-middle ps-4" scope="col" data-sort="time" style="width:50px;">Publish</th>
-                            <th class="sort text-end align-middle pe-0 ps-4" scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody class="list" id="tmp-blog">
-
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        $.ajax({
+            type: "GET",
+            url: "<?= base_url('core/data_blog') ?>",
+            dataType: "html",
+            success: function(data) {
+                // console.log(data);
+                $("#tmp-blog").html(data);
+            }
+        })
+    })
+</script>

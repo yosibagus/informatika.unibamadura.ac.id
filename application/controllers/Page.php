@@ -26,6 +26,7 @@ class Page extends CI_Controller
         $data['title'] = "Sejarah";
         $data['deskripsi'] = "Sejarah Informatika UNIBA Madura";
         $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['sejarah'] = $this->muser->getSingleBlog(1)->row_array();
         $this->load->view('layout/header', $data);
         $this->load->view('user/profil/sejarah/sejarah', $data);
         $this->load->view('layout/footer');
@@ -54,7 +55,9 @@ class Page extends CI_Controller
 
     public function manajemen_proker()
     {
-        $data['title'] = "Program Kerja";
+        $data['blog'] = $this->muser->getSingleBlog(3)->row_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['title'] = $data['blog']['judul_blog'];
         $data['deskripsi'] = "Program Kerja Informatika UNIBA Madura";
         $this->load->view('layout/header', $data);
         $this->load->view('user/profil/manajemen/program_kerja');
@@ -63,7 +66,9 @@ class Page extends CI_Controller
 
     public function manajemen_raker()
     {
-        $data['title'] = "Rencana Kerja";
+        $data['blog'] = $this->muser->getSingleBlog(7)->row_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['title'] = $data['blog']['judul_blog'];
         $data['deskripsi'] = "Rencana Kerja Informatika UNIBA Madura";
         $this->load->view('layout/header', $data);
         $this->load->view('user/profil/manajemen/rencana_kerja');

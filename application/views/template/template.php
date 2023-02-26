@@ -92,34 +92,15 @@
                                 <!-- label-->
                                 <p class="navbar-vertical-label">Master</p>
                                 <hr class="navbar-vertical-line" />
-                                <span class="nav-item-wrapper"><a class="nav-link dropdown-indicator label-1" href="#e-commerce" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="e-commerce">
-                                        <div class="d-flex align-items-center">
-                                            <div class="dropdown-indicator-icon"><span class="fas fa-caret-right"></span>
-                                            </div><span class="nav-link-icon"><span data-feather="book-open"></span></span><span class="nav-link-text">Informasi</span>
-                                        </div>
-                                    </a>
-                                    <div class="parent-wrapper label-1">
-                                        <ul class="nav collapse parent" data-bs-parent="#navbarVerticalCollapse" id="e-commerce">
-                                            <p class="collapsed-nav-item-title d-none">Informasi</p>
-                                            <li class="nav-item"><a class="nav-link" href="<?= base_url('algoritma/#/kategori') ?>" data-bs-toggle="" aria-expanded="false">
-                                                    <div class="d-flex align-items-center"><span class="nav-link-text">Kategori</span></div>
-                                                </a><!-- more inner pages-->
-                                            </li>
-                                            <li class="nav-item"><a class="nav-link dropdown-indicator" href="#landing" data-bs-toggle="collapse" aria-expanded="true" aria-controls="e-commerce">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="dropdown-indicator-icon"><span class="fas fa-caret-right"></span></div><span class="nav-link-text">List</span>
-                                                    </div>
-                                                </a><!-- more inner pages-->
-                                                <div class="parent-wrapper">
-                                                    <ul class="nav collapse parent show tmp-kategori" data-bs-parent="#e-commerce" id="landing">
 
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </span>
                             </li>
+                            <div class="nav-item-wrapper"><a class="nav-link label-1" href="<?= base_url('algoritma/#/kategori') ?>" role="button" data-bs-toggle="" aria-expanded="false">
+                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor">
+                                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                                            </svg></span><span class="nav-link-text-wrapper"><span class="nav-link-text">Informasi</span></span></div>
+                                </a></div>
                             <div class="nav-item-wrapper"><a class="nav-link label-1" href="<?= base_url('algoritma/#/single_blog') ?>" role="button" data-bs-toggle="" aria-expanded="false">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor">
                                                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
@@ -1068,19 +1049,6 @@
         $(document).ready(function() {
             $('#main').load(baseurl + 'algoritma/' + hash);
         })
-    </script>
-
-    <script>
-        $(document).ready(function() {
-            $.ajax({
-                type: "GET",
-                url: "<?= base_url('core/getKategoriMenu') ?>",
-                dataType: "html",
-                success: function(data) {
-                    $(".tmp-kategori").html(data);
-                }
-            })
-        });
     </script>
 
 </body>

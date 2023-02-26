@@ -87,6 +87,16 @@ class Core extends CI_Controller
 
         if (!$this->upload->do_upload('file_blog')) {
             $data = array('error' => $this->upload->display_errors());
+            $input = [
+                'judul_blog' => $this->input->post('judul_blog'),
+                'sub_blog' => $this->input->post('sub_judul'),
+                'deskripsi_blog' => $this->input->post('deskripsi_blog'),
+                'file_blog' => '',
+                'tipe_file' => '',
+                'ukuran_file' => '',
+                'publish_blog' => 1
+            ];
+            $this->db->insert('master_blog', $input);
         } else {
             $data = $this->upload->data();
             $input = [
@@ -103,6 +113,40 @@ class Core extends CI_Controller
 
         // echo json_encode($data);
         echo json_encode($data);
+    }
+
+    public function data_blog()
+    {
+        $data = $this->mcore->getAllSingleBlog()->result_array();
+        $i = 1;
+        foreach ($data as $get) {
+            echo '<tr class="hover-actions-trigger btn-reveal-trigger position-static">
+            <td class="fs--1 align-middle">
+                ' . $i++ . '
+            </td>
+            <td class="tags align-middle review pb-2 ps-4" style="min-width:225px;">
+                <a href="' . base_url('algoritma/#/sub_kategori/') . '">' . $get['judul_blog'] . '</a>
+            </td>
+            <td class="tags align-middle review pb-2 ps-4" style="min-width:225px;">
+                ' . $get['sub_blog'] . '
+            </td>
+            <td class="tags align-middle review pb-2 ps-4" style="min-width:225px;">
+                ...
+            </td>
+            <td class="time align-middle white-space-nowrap text-600 ps-4">' . $get['file_blog'] . '</td>
+            <td class="time align-middle white-space-nowrap text-600 ps-4">' . $get['publish_blog'] . '</td>
+            <td class="align-middle white-space-nowrap text-end pe-0 ps-4">
+                <div class="position-relative">
+                    <div class="hover-actions"><button class="btn btn-sm btn-phoenix-secondary me-1 fs--2"><span class="fas fa-check"></span></button><button class="btn btn-sm btn-phoenix-secondary fs--2"><span class="fas fa-trash"></span></button></div>
+                </div>
+                <div class="font-sans-serif btn-reveal-trigger position-static"><button class="btn btn-sm dropdown-toggle dropdown-caret-none transition-none btn-reveal fs--2" type="button" data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><span class="fas fa-ellipsis-h fs--2"></span></button>
+                    <div class="dropdown-menu dropdown-menu-end py-2"><a class="dropdown-item" href="' . base_url('algoritma/#/sub_kategori/')  . '">Tambah Sub Kategori</a>
+                        <div class="dropdown-divider"></div><a class="dropdown-item text-danger" href="#!">Remove</a>
+                    </div>
+                </div>
+            </td>
+            </tr>';
+        }
     }
 }
 
