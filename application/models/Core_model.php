@@ -18,9 +18,15 @@ class Core_model extends CI_Model
         $this->db->where('id_kategori', $id);
         return $this->db->get('master_kategori');
     }
+
     public function getAllSingleBlog()
     {
         return $this->db->get('master_blog');
+    }
+
+    public function getListDetailKategori($id)
+    {
+        return $this->db->get_where('master_informasi', ['id_kategori' => $id]);
     }
 }
 

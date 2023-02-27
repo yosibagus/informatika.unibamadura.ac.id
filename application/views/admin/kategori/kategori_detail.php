@@ -31,13 +31,14 @@
                                 </th>
 
                                 <th class="sort align-middle ps-4" scope="col" data-sort="category" style="width:150px;">Judul </th>
-                                <th class="sort align-middle ps-4" scope="col" data-sort="vendor" style="width:200px;">File</th>
+                                <th class="sort align-middle ps-4" scope="col" data-sort="vendor" style="width:200px;">Deskripsi</th>
                                 <th class="sort align-middle ps-4" scope="col" data-sort="vendor" style="width:200px;">Vendor</th>
+                                <th class="sort align-middle ps-4" scope="col" data-sort="vendor" style="width:200px;">File</th>
                                 <th class="sort align-middle ps-4" scope="col" data-sort="time" style="width:50px;">Publish</th>
                                 <th class="sort text-end align-middle pe-0 ps-4" scope="col"></th>
                             </tr>
                         </thead>
-                        <tbody class="list" id="tmp-kategori">
+                        <tbody class="list" id="tmp-detail">
 
                         </tbody>
                     </table>
@@ -46,3 +47,23 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    $(document).ready(function() {
+        var id = "<?= $data['id_kategori'] ?>";
+        console.log(id);
+        $.ajax({
+            type: "GET",
+            url: "<?= base_url('core/data_kategori_detail') ?>",
+            data: {
+                id: id
+            },
+            dataType: "html",
+            success: function(data) {
+                $("#tmp-detail").html(data);
+            }
+        });
+
+    })
+</script>

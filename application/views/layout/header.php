@@ -9,6 +9,7 @@
     <!-- responsive tag -->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Yosi Bagus Sadar Rasuli" />
     <link rel="apple-touch-icon" href="apple-touch-icon.html">
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('assets/front/') ?>logo/informatika.png">
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/front/') ?>css/bootstrap.min.css">
@@ -124,9 +125,10 @@
                                                 <li class="menu-item-has-children">
                                                     <a href="blog.html">Informasi</a>
                                                     <ul class="sub-menu">
-                                                        <li><a href="<?= base_url('informasi/berita') ?>">Berita</a></li>
-                                                        <li><a href="<?= base_url('informasi/pengumuman') ?>">Pengumuman</a></li>
-                                                        <li><a href="<?= base_url('informasi/surat_edaran') ?>">Surat Edaran</a></li>
+                                                        <?php $data = $this->db->get_where('master_kategori', ['url' => 'informasi'])->result_array(); ?>
+                                                        <?php foreach ($data as $get) : ?>
+                                                            <li><a href="<?= base_url('page/informasi/') . $get['kode_kategori'] ?>"><?= $get['nama_kategori'] ?></a></li>
+                                                        <?php endforeach; ?>
                                                     </ul>
                                                 </li>
                                                 <li class="rs-mega-menu menu-item-has-children"> <a href="#">Akademik</a>

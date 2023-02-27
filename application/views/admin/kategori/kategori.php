@@ -19,26 +19,28 @@
                 </div>
             </div>
         </div>
-        <div class="mx-n4 px-4 mx-lg-n6 px-lg-6 bg-white border-top border-bottom border-200 position-relative top-1">
-            <div class="table-responsive scrollbar mx-n1 px-1">
-                <table class="table fs--1 mb-0">
-                    <thead>
-                        <tr>
-                            <th class="white-space-nowrap fs--1 align-middle" style="max-width:20px; width:18px;">
-                                No
-                            </th>
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive scrollbar mx-n1 px-1">
+                    <table class="table fs--1 mb-0">
+                        <thead>
+                            <tr>
+                                <th class="white-space-nowrap fs--1 align-middle" style="max-width:20px; width:18px;">
+                                    No
+                                </th>
 
-                            <th class="sort align-middle ps-4" scope="col" data-sort="category" style="width:150px;">CATEGORY</th>
-                            <th class="sort align-middle ps-4" scope="col" data-sort="vendor" style="width:200px;">VENDOR</th>
-                            <th class="sort align-middle ps-4" scope="col" data-sort="vendor" style="width:200px;">JUMLAH SUB</th>
-                            <th class="sort align-middle ps-4" scope="col" data-sort="time" style="width:50px;">PUBLISHED ON</th>
-                            <th class="sort text-end align-middle pe-0 ps-4" scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody class="list" id="tmp-kategori">
+                                <th class="sort align-middle ps-4" scope="col" data-sort="category" style="width:150px;">CATEGORY</th>
+                                <th class="sort align-middle ps-4" scope="col" data-sort="vendor" style="width:200px;">VENDOR</th>
+                                <th class="sort align-middle ps-4" scope="col" data-sort="vendor" style="width:200px;">JUMLAH SUB</th>
+                                <th class="sort align-middle ps-4" scope="col" data-sort="time" style="width:50px;">PUBLISHED ON</th>
+                                <th class="sort text-end align-middle pe-0 ps-4" scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="list" id="tmp-kategori">
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

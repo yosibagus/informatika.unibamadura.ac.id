@@ -52,28 +52,10 @@
 
 <script>
     $(document).ready(function() {
-        // $("#form-blog").on('submit', function(e) {
-        //     e.preventDefault();
-        //     var data = $('#form-blog').serialize();
-        //     $.ajax({
-        //         type: 'POST',
-        //         url: "<?= base_url('core/blog_tambah') ?>",
-        //         enctype: 'multipart/form-data',
-        //         data: data,
-        //         dataType: 'json',
-        //         processData: false,
-        //         contentType: false,
-        //         cache: false,
-        //         success: function(data) {
-        //             console.log(data);
-        //         }
-        //     });
-        // });
         $("form").submit(function(e) {
             e.preventDefault();
             var form = $('#form-blog')[0];
             var data = new FormData(form);
-            // console.log();
             $.ajax({
                 url: '<?= base_url('core/blog_tambah') ?>',
                 type: 'post',

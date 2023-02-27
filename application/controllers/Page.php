@@ -143,6 +143,18 @@ class Page extends CI_Controller
         $this->load->view('user/informasi/surat_edaran/surat_edaran');
         $this->load->view('layout/footer');
     }
+
+    public function informasi($kode_kategori)
+    {
+        $data['blog'] = $this->muser->getDetailKategori($kode_kategori)->row_array();
+        $data['informasi'] = $this->muser->getListInformasi($data['blog']['id_kategori'])->result_array();
+        $data['kategori'] = $this->muser->kategoriNonInformasi()->result_array();
+        $data['title'] = $data['blog']['nama_kategori'];
+        $data['deskripsi'] = $data['blog']['keterangan_kategori'];
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/informasi/informasi');
+        $this->load->view('layout/footer');
+    }
 }
 
 /* End of file User.php and path \application\controllers\User.php */
