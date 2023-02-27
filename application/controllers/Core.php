@@ -54,7 +54,7 @@ class Core extends CI_Controller
                 ' . $i++ . '
             </td>
             <td class="tags align-middle review pb-2 ps-4" style="min-width:225px;">
-                <a href="' . base_url('algoritma/#/sub_kategori/') . $get['id_kategori'] . "/" . $get['kode_kategori'] . '">' . $get['nama_kategori'] . '</a>
+                <a href="' . base_url('algoritma/#/detail_kategori/') . $get['id_kategori'] . "/" . $get['kode_kategori'] . '">' . $get['nama_kategori'] . '</a>
             </td>
             <td class="tags align-middle review pb-2 ps-4" style="min-width:225px;">
                 Admin
@@ -68,7 +68,7 @@ class Core extends CI_Controller
                     <div class="hover-actions"><button class="btn btn-sm btn-phoenix-secondary me-1 fs--2"><span class="fas fa-check"></span></button><button class="btn btn-sm btn-phoenix-secondary fs--2"><span class="fas fa-trash"></span></button></div>
                 </div>
                 <div class="font-sans-serif btn-reveal-trigger position-static"><button class="btn btn-sm dropdown-toggle dropdown-caret-none transition-none btn-reveal fs--2" type="button" data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><span class="fas fa-ellipsis-h fs--2"></span></button>
-                    <div class="dropdown-menu dropdown-menu-end py-2"><a class="dropdown-item" href="' . base_url('algoritma/#/sub_kategori/') . $get['id_kategori'] . "/" . $get['kode_kategori'] . '">Tambah Sub Kategori</a>
+                    <div class="dropdown-menu dropdown-menu-end py-2"><a class="dropdown-item" href="' . base_url('algoritma/#/detail_kategori/') . $get['id_kategori'] . "/" . $get['kode_kategori'] . '">Tambah Sub Kategori</a>
                         <div class="dropdown-divider"></div><a class="dropdown-item text-danger" href="#!">Remove</a>
                     </div>
                 </div>

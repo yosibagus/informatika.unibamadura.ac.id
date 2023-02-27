@@ -99,7 +99,7 @@
                                                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                                                 <line x1="8" y1="21" x2="16" y2="21"></line>
                                                 <line x1="12" y1="17" x2="12" y2="21"></line>
-                                            </svg></span><span class="nav-link-text-wrapper"><span class="nav-link-text">Informasi</span></span></div>
+                                            </svg></span><span class="nav-link-text-wrapper"><span class="nav-link-text">Multi Blog</span></span></div>
                                 </a></div>
                             <div class="nav-item-wrapper"><a class="nav-link label-1" href="<?= base_url('algoritma/#/single_blog') ?>" role="button" data-bs-toggle="" aria-expanded="false">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor">
