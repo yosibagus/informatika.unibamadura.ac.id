@@ -149,10 +149,26 @@ class Page extends CI_Controller
         $data['blog'] = $this->muser->getDetailKategori($kode_kategori)->row_array();
         $data['informasi'] = $this->muser->getListInformasi($data['blog']['id_kategori'])->result_array();
         $data['kategori'] = $this->muser->kategoriNonInformasi()->result_array();
+        $data['kategori_all'] = $this->muser->kategoriNonInformasi('informasi')->result_array();
         $data['title'] = $data['blog']['nama_kategori'];
         $data['deskripsi'] = $data['blog']['keterangan_kategori'];
         $this->load->view('layout/header', $data);
         $this->load->view('user/informasi/informasi');
+        $this->load->view('layout/footer');
+    }
+
+    public function detail($token)
+    {
+        $data['informasi'] = $this->muser->informasiDetail($token)->row_array();
+        $data['blog'] = $this->muser->getKategori($data['informasi']['id_kategori'])->row_array();
+        $data['post'] = $this->muser->last_post(4)->result_array();
+        $data['kategori'] = $this->muser->kategoriNonInformasi()->result_array();
+
+        $data['title'] = $data['blog']['nama_kategori'];
+        $data['deskripsi'] = $data['blog']['keterangan_kategori'];
+
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/informasi/informasi_detail');
         $this->load->view('layout/footer');
     }
 }

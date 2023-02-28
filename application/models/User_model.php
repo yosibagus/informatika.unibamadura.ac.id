@@ -3,9 +3,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class User_model extends CI_Model
 {
-    public function getKategori()
+    public function getKategori($id = null)
     {
-        return $this->db->get('master_kategori');
+        if ($id == "") {
+            return $this->db->get('master_kategori');
+        } else {
+            return $this->db->get_where('master_kategori', ['id_kategori' => $id]);
+        }
     }
 
     public function kategoriNonInformasi()
@@ -41,6 +45,20 @@ class User_model extends CI_Model
         $this->db->where('master_informasi.id_kategori', $kode_kategori);
         $this->db->order_by('master_informasi.tgl_informasi', 'desc');
 
+        return $this->db->get();
+    }
+
+    public function informasiDetail($token)
+    {
+        return $this->db->get_where('master_informasi', ['token_informasi' => $token]);
+    }
+
+    public function last_post($limit)
+    {
+        $this->db->select('*');
+        $this->db->from('master_informasi');
+        $this->db->limit($limit);
+        $this->db->order_by('tgl_informasi', 'desc');
         return $this->db->get();
     }
 }

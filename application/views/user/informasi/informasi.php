@@ -44,42 +44,6 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="recent-post-widget">
-                                    <div class="post-img">
-                                        <a href=""><img src="assets/images/blog/inner/2.jpg" alt=""></a>
-                                    </div>
-                                    <div class="post-desc">
-                                        <a href="">Tech Products That Makes Its Easier to Stay at Home</a>
-                                        <span class="date">
-                                            <i class="fa fa-calendar"></i>
-                                            January 21, 2020
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="recent-post-widget">
-                                    <div class="post-img">
-                                        <a href=""><img src="assets/images/blog/inner/3.jpg" alt=""></a>
-                                    </div>
-                                    <div class="post-desc">
-                                        <a href="">Necessity May Give Us Your Best Virtual Court System </a>
-                                        <span class="date">
-                                            <i class="fa fa-calendar"></i>
-                                            January 21, 2020
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="recent-post-widget">
-                                    <div class="post-img">
-                                        <a href=""><img src="assets/images/blog/inner/4.jpg" alt=""></a>
-                                    </div>
-                                    <div class="post-desc">
-                                        <a href="">Servo Project Joins The Linux Foundation Fold Desco </a>
-                                        <span class="date">
-                                            <i class="fa fa-calendar"></i>
-                                            January 21, 2020
-                                        </span>
-                                    </div>
-                                </div>
                             </div>
                             <div class="categories mb-50">
                                 <div class="widget-title">
@@ -128,7 +92,7 @@
                                                         We denounce with righteous indige nation and dislike men who are so beguiled and demo realized by the charms of pleasure of the moment, so blinded by desire, that...
                                                     </div> -->
                                                     <div class="blog-button inner-blog">
-                                                        <a class="blog-btn" href="">Selengkapnya</a>
+                                                        <a class="blog-btn" href="<?= base_url('page/detail/') . $get['token_informasi'] ?>">Selengkapnya</a>
                                                     </div>
                                                 </div>
                                             </div>

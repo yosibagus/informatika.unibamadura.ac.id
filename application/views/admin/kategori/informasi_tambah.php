@@ -66,6 +66,9 @@
                 <textarea id="isi_informasi" name="isi_informasi"></textarea>
             </div>
             <div class="col-12 gy-6">
+                <textarea id="informasi" name="informasi" hidden></textarea>
+            </div>
+            <div class="col-12 gy-6">
                 <div class="row g-3 justify-content-end">
                     <div class="col-auto">
                         <a href="<?= base_url('algoritma/#/kategori') ?>" class="btn btn-lg btn-phoenix-primary px-5">Cancel</a>
@@ -80,19 +83,24 @@
 </div>
 
 <script>
-    ClassicEditor
-        .create(document.querySelector('#isi_informasi'))
-        .then(editor => {})
-        .catch(error => {});
-</script>
-
-<script>
     $(document).ready(function() {
+        var editor = CKEDITOR.replace('isi_informasi', {
+            height: 300,
+            filebrowserUploadMethod: 'form',
+            filebrowserUploadUrl: "<?= base_url('core/upload_image') ?>"
+        });
+
+        editor.on('change', function(evt) {
+            $("#informasi").val(evt.editor.getData());
+        });
+
         $("form").submit(function(e) {
             e.preventDefault();
             var form = $('#form-informasi')[0];
             var data = new FormData(form);
             var id = "<?= $data['id_kategori'] ?>";
+            var kode = "<?= $data['kode_kategori'] ?>";
+            console.log($("#informasi").val());
             $.ajax({
                 url: '<?= base_url('core/informasi_tambah/') ?>' + id,
                 type: 'post',
@@ -103,7 +111,6 @@
                 cache: false,
                 dataType: "json",
                 success: function(data) {
-                    console.log(data);
                     VanillaToasts.create({
                         title: 'Ruang Algoritma',
                         text: 'Kategori Berhasil Disimpan',
@@ -115,7 +122,7 @@
                             window.location.href = '#kategori';
                         }
                     });
-                    window.location.href = "<?= base_url('algoritma/#/kategori') ?>"
+                    window.location.href = "<?= base_url('algoritma/#/detail_kategori/') ?>" + id + "/" + kode;
                 }
             });
         });

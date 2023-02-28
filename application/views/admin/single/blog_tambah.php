@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="col-12 gy-6">
-                <textarea id="deskripsi_blog" name="deskripsi_blog"></textarea>
+                <textarea id="deskripsi_blog" name="deskripsi_blog" class="ckeditor"></textarea>
             </div>
             <div class="col-12 gy-6">
                 <div class="row g-3 justify-content-end">
@@ -44,10 +44,13 @@
 </div>
 
 <script>
-    ClassicEditor
-        .create(document.querySelector('#deskripsi_blog'))
-        .then(editor => {})
-        .catch(error => {});
+    $(document).ready(function() {
+        CKEDITOR.replace('deskripsi_blog', {
+            height: 300,
+            filebrowserUploadMethod: 'form',
+            filebrowserUploadUrl: "<?= base_url('core/upload_image') ?>"
+        });
+    })
 </script>
 
 <script>

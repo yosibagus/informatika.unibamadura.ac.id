@@ -176,16 +176,17 @@ class Core extends CI_Controller
         } else {
             $data = $this->upload->data();
             $input = [
-                'id_kategori' => $id,
                 'token_informasi' => random_string('md5'),
-                'status_informasi' => $this->input->post('status_informasi'),
+                'id_kategori' => $id,
                 'judul_informasi' => $this->input->post('judul_informasi'),
+                'lokasi_informasi' => 'Uniba Madura',
                 'deskripsi_informasi' => $this->input->post('deskripsi_informasi'),
+                'isi_informasi' => $this->input->post('informasi'),
                 'tgl_informasi' => $tgl == '' ? date('d-m-y') : $tgl,
-                'isi_informasi' => $this->input->post('isi_informasi'),
+                'id_akses' => 1,
+                'status_informasi' => $this->input->post('status_informasi'),
                 'file_informasi' => $data['file_name'],
                 'tipefile_informasi' => $data['file_ext'],
-                'id_akses' => 1
             ];
         }
 
@@ -277,6 +278,24 @@ class Core extends CI_Controller
         echo json_encode($result);
         // $this->db->bat('master_informasi', $result);
         $this->db->insert_batch('master_informasi', $result);
+    }
+
+    public function upload_image()
+    {
+        $file = $_FILES['upload']['tmp_name'];
+        $file_name = $_FILES['upload']['name'];
+        $file_name_array = explode(".", $file_name);
+        $extension = end($file_name_array);
+        $new_image_name = rand() . '.' . $extension;
+        chmod('./assets/upload/', 0777);
+        $allowed_extension = array("jpg", "gif", "png");
+        if (in_array($extension, $allowed_extension)) {
+            move_uploaded_file($file, './assets/upload/' . $new_image_name);
+            $function_number = $_GET['CKEditorFuncNum'];
+            $url = base_url('assets/upload/') . $new_image_name;
+            $message = '';
+            echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction($function_number, '$url', '$message');</script>";
+        }
     }
 }
 
