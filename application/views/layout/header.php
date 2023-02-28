@@ -81,7 +81,7 @@
                         <div class="row align-items-center">
                             <div class="col-lg-3">
                                 <div class="logo-part">
-                                    <a href="index.html"><img src="<?= base_url('assets/front/') ?>logo/informatika.png" alt=""></a>
+                                    <a href="index.html"><img src="<?= base_url('assets/front/') ?>logo/uniba_informatika.png" alt=""></a>
                                 </div>
                                 <div class="mobile-menu">
                                     <a href="#" class="rs-menu-toggle rs-menu-toggle-close secondary">
@@ -144,7 +144,7 @@
                                                                     <ul class="sub-menu" style="background-color: white;">
                                                                         <li class="menu-title">Pendidikan</li>
                                                                         <li><a href="<?= base_url('akademik/pendidikan/sistem_pendidikan') ?>">Sistem Pendidikan</a></li>
-                                                                        <li><a href="index9.html">Kalender Akademik</a></li>
+                                                                        <li><a href="<?= base_url('akademik/pendidikan/kalender_akademik') ?>">Kalender Akademik</a></li>
                                                                         <li><a href="index10.html">Jadwal Kuliah</a></li>
                                                                         <li><a href="index10.html">MBKM</a></li>
                                                                     </ul>
