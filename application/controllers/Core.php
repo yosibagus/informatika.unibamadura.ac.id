@@ -81,7 +81,7 @@ class Core extends CI_Controller
     {
         $config['upload_path']          = './assets/foto/upload/';
         $config['allowed_types']        = 'gif|jpg|png|pdf';
-        $config['max_width']            = 5024;
+        $config['max_width']            = 10024;
 
         $this->load->library('upload', $config);
 
@@ -90,7 +90,7 @@ class Core extends CI_Controller
             $input = [
                 'judul_blog' => $this->input->post('judul_blog'),
                 'sub_blog' => $this->input->post('sub_judul'),
-                'deskripsi_blog' => $this->input->post('deskripsi_blog'),
+                'deskripsi_blog' => $this->input->post('informasi'),
                 'file_blog' => '',
                 'tipe_file' => '',
                 'ukuran_file' => '',
@@ -102,7 +102,7 @@ class Core extends CI_Controller
             $input = [
                 'judul_blog' => $this->input->post('judul_blog'),
                 'sub_blog' => $this->input->post('sub_judul'),
-                'deskripsi_blog' => $this->input->post('deskripsi_blog'),
+                'deskripsi_blog' => $this->input->post('informasi'),
                 'file_blog' => $data['file_name'],
                 'tipe_file' => $data['file_ext'],
                 'ukuran_file' => $data['file_size'],

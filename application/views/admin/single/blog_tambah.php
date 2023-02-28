@@ -30,6 +30,9 @@
                 <textarea id="deskripsi_blog" name="deskripsi_blog" class="ckeditor"></textarea>
             </div>
             <div class="col-12 gy-6">
+                <textarea id="informasi" name="informasi"></textarea>
+            </div>
+            <div class="col-12 gy-6">
                 <div class="row g-3 justify-content-end">
                     <div class="col-auto">
                         <a href="<?= base_url('algoritma/#/kategori') ?>" class="btn btn-lg btn-phoenix-primary px-5">Cancel</a>
@@ -45,16 +48,15 @@
 
 <script>
     $(document).ready(function() {
-        CKEDITOR.replace('deskripsi_blog', {
+        var editor = CKEDITOR.replace('deskripsi_blog', {
             height: 300,
             filebrowserUploadMethod: 'form',
             filebrowserUploadUrl: "<?= base_url('core/upload_image') ?>"
         });
-    })
-</script>
+        editor.on('change', function(evt) {
+            $("#informasi").val(evt.editor.getData());
+        });
 
-<script>
-    $(document).ready(function() {
         $("form").submit(function(e) {
             e.preventDefault();
             var form = $('#form-blog')[0];

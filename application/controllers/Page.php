@@ -171,6 +171,30 @@ class Page extends CI_Controller
         $this->load->view('user/informasi/informasi_detail');
         $this->load->view('layout/footer');
     }
+
+    //akademik
+
+    public function sistem_pendidikan()
+    {
+        $data['blog'] = $this->muser->getSingleBlog(8)->row_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['title'] = $data['blog']['judul_blog'];
+        $data['deskripsi'] = $data['blog']['sub_blog'];
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/akademik/pendidikan/sistem_pendidikan');
+        $this->load->view('layout/footer');
+    }
+
+    public function kalender_akademik()
+    {
+        $data['blog'] = $this->muser->getSingleBlog(15)->row_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['title'] = $data['blog']['judul_blog'];
+        $data['deskripsi'] = $data['blog']['sub_blog'];
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/akademik/pendidikan/kalender_akademik');
+        $this->load->view('layout/footer');
+    }
 }
 
 /* End of file User.php and path \application\controllers\User.php */

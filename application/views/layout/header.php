@@ -142,8 +142,8 @@
                                                                 </div>
                                                                 <div class="single-megamenu">
                                                                     <ul class="sub-menu" style="background-color: white;">
-                                                                        <li class="menu-title">Administratif</li>
-                                                                        <li><a href="index8.html">Sistem Pendidikan</a></li>
+                                                                        <li class="menu-title">Pendidikan</li>
+                                                                        <li><a href="<?= base_url('akademik/pendidikan/sistem_pendidikan') ?>">Sistem Pendidikan</a></li>
                                                                         <li><a href="index9.html">Kalender Akademik</a></li>
                                                                         <li><a href="index10.html">Jadwal Kuliah</a></li>
                                                                         <li><a href="index10.html">MBKM</a></li>
