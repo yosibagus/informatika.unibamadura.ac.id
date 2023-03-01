@@ -1028,7 +1028,7 @@
     <script src="<?= base_url('assets/back/') ?>assets/js/ecommerce-dashboard.js"></script>
 
     <script>
-        var baseurl = "http://localhost/informatika.unibamadura.ac.id/";
+        var baseurl = "http://192.168.1.128/informatika.unibamadura.ac.id/";
 
         function loadContent(hash) {
             if (hash == '') {

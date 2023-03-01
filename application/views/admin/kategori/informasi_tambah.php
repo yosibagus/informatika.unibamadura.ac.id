@@ -39,13 +39,13 @@
             <hr>
             <div class="col-sm-6">
                 <div class="form-floating">
-                    <input class="form-control" id="judul_informasi" name="judul_informasi" type="text" placeholder="Project title" />
+                    <input class="form-control" id="judul_informasi" name="judul_informasi" autocomplete="off" type="text" placeholder="Project title" />
                     <label for="judul_informasi">Judul</label>
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="form-floating">
-                    <input class="form-control" name="deskripsi_informasi" id="deskripsi_informasi" type="text" placeholder="Project title" />
+                    <input class="form-control" name="deskripsi_informasi" id="deskripsi_informasi" autocomplete="off" type="text" placeholder="Project title" />
                     <label for="deskripsi_informasi">Deskripsi</label>
                 </div>
             </div>

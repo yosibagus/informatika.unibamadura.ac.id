@@ -152,7 +152,7 @@ class Core extends CI_Controller
     public function informasi_tambah($id)
     {
         $config['upload_path']          = './assets/foto/informasi/';
-        $config['allowed_types']        = 'gif|jpg|png|pdf|docx';
+        $config['allowed_types']        = 'gif|jpg|png|pdf|docx|doc|xls';
         $config['max_width']            = 5024;
         $tgl = $this->input->post('tgl_informasi');
 

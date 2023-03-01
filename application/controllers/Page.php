@@ -14,6 +14,7 @@ class Page extends CI_Controller
     {
         $data['title'] = "Home";
         $data['deskripsi'] = "Selamat Datang Di Informatika UNIBA Madura";
+        $data['informasi'] = $this->muser->getListInformasiLimit(18, 6)->result_array();
         $this->load->view('layout/header', $data);
         $this->load->view('user/landing/landing');
         $this->load->view('layout/footer');
@@ -106,10 +107,13 @@ class Page extends CI_Controller
 
     public function akreditasi()
     {
-        $data['title'] = "Akreditasi";
-        $data['deskripsi'] = "Akreditasi Informatika UNIBA Madura";
+        $data['blog'] = $this->muser->getKategori(29)->row_array();
+        $data['informasi'] = $this->muser->getListInformasi($data['blog']['id_kategori'])->result_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['title'] = $data['blog']['nama_kategori'];
+        $data['deskripsi'] = $data['blog']['keterangan_kategori'];
         $this->load->view('layout/header', $data);
-        $this->load->view('user/profil/akreditasi/akreditasi');
+        $this->load->view('user/profil/akreditasi/akreditasi', $data);
         $this->load->view('layout/footer');
     }
 
@@ -242,6 +246,19 @@ class Page extends CI_Controller
         $this->load->view('user/akademik/prosedur/pkl', $data);
         $this->load->view('layout/footer');
     }
+
+    public function sempro_skripsi()
+    {
+        $data['blog'] = $this->muser->getKategori(28)->row_array();
+        $data['informasi'] = $this->muser->getListInformasi($data['blog']['id_kategori'])->result_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['title'] = $data['blog']['nama_kategori'];
+        $data['deskripsi'] = $data['blog']['keterangan_kategori'];
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/akademik/prosedur/sempro_skripsi', $data);
+        $this->load->view('layout/footer');
+    }
+
 
     public function notfound()
     {

@@ -4,19 +4,26 @@
     }
 </style>
 <div class="rs-breadcrumbs" style="background: url(<?= base_url('assets/front/images/banner/dua.jpg') ?>)">
-    <div class="breadcrumbs-inner text-center">
-        <ul>
-            <li title="Informasi">
-                <a class="active" href="">Informasi</a>
-            </li>
-            <li title="Informasi">
-                <a class="active" href=""><?= $blog['nama_kategori'] ?></a>
-            </li>
-            <li>Detail</li>
-        </ul>
-        <h1 class="page-title new-title pb-10"><?= $informasi['judul_informasi'] ?></h1>
-        <div class="btn-part mb-1">
-            <a class="readon learn-more" href="contact.html"><?= $informasi['tgl_informasi'] ?></a>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-7">
+                <div class="breadcrumbs-inner">
+                    <ul>
+                        <li title="Informasi">
+                            <a class="active" href="">Informasi</a>
+                        </li>
+                        <li title="Informasi">
+                            <a class="active" href=""><?= $blog['nama_kategori'] ?></a>
+                        </li>
+                        <li>Detail</li>
+                    </ul>
+                    <h1 class="page-title pb-10"><?= $informasi['judul_informasi'] ?></h1>
+                    <div class="btn-part mb-1">
+                        <a class="readon learn-more" href="contact.html"><?= $informasi['tgl_informasi'] ?></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3"></div>
         </div>
     </div>
 </div>

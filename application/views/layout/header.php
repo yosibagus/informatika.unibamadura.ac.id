@@ -79,7 +79,7 @@
                 <div class="menu-area menu-sticky">
                     <div class="container-fluid">
                         <div class="row align-items-center">
-                            <div class="col-lg-3">
+                            <div class="col-lg-2">
                                 <div class="logo-part">
                                     <a href="<?= base_url() ?>"><img src="<?= base_url('assets/front/') ?>logo/uniba_informatika.png" alt=""></a>
                                 </div>
@@ -89,7 +89,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-9 text-right">
+                            <div class="col-lg-10 text-right">
                                 <div class="rs-menu-area">
                                     <div class="main-menu">
                                         <nav class="rs-menu pr-100 lg-pr-50 md-pr-0">
@@ -146,6 +146,8 @@
                                                                         <li><a href="<?= base_url('akademik/pendidikan/sistem_pendidikan') ?>">Sistem Pendidikan</a></li>
                                                                         <li><a href="<?= base_url('akademik/pendidikan/kalender_akademik') ?>">Kalender Akademik</a></li>
                                                                         <li><a href="">Jadwal Kuliah</a></li>
+                                                                        <li><a href="">SOP Praktikum</a></li>
+                                                                        <li><a href="">Kurikulum</a></li>
                                                                         <li><a href="<?= base_url('akademik/pendidikan/mbkm') ?>">MBKM</a></li>
                                                                     </ul>
                                                                 </div>

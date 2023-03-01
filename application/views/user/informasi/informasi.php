@@ -32,7 +32,7 @@
                                 <div class="widget-title">
                                     <h3 class="title">Event</h3>
                                 </div>
-                                <div class="recent-post-widget">
+                                <!-- <div class="recent-post-widget">
                                     <div class="post-img">
                                         <a href=""><img src="assets/images/blog/inner/1.jpg" alt=""></a>
                                     </div>
@@ -43,7 +43,7 @@
                                             January 21, 2020
                                         </span>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="categories mb-50">
                                 <div class="widget-title">
