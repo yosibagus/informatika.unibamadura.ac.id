@@ -86,7 +86,7 @@
                              tersebut, serta menampilkan dalam bentuk informasi. </div>
                      </div>
                      <div class="btn-part">
-                         <a class="readon learn-more contact-us" href="contact.html">Learn More</a>
+                         <a class="readon learn-more contact-us" href="<?= base_url('profil/visi_misi') ?>">Learn More</a>
                      </div>
                  </div>
              </div>
@@ -162,7 +162,7 @@
                  <div class="counter-list">
                      <div class="counter-text">
                          <div class="count-number">
-                             <span class="rs-count k">80</span>
+                             <span class="rs-count k">0</span>
                          </div>
                          <h3 class="title">Dosen</h3>
                      </div>
@@ -172,7 +172,7 @@
                  <div class="counter-list">
                      <div class="counter-text">
                          <div class="count-number">
-                             <span class="rs-count plus">50</span>
+                             <span class="rs-count plus">0</span>
                          </div>
                          <h3 class="title">Mahasiswa</h3>
                      </div>
@@ -182,7 +182,7 @@
                  <div class="counter-list">
                      <div class="counter-text">
                          <div class="count-number">
-                             <span class="rs-count plus">230</span>
+                             <span class="rs-count plus">0</span>
                          </div>
                          <h3 class="title">Alumni</h3>
                      </div>
@@ -204,7 +204,7 @@
                              Madura </h2>
                      </div>
                      <div class="btn-part mt-40">
-                         <a class="readon learn-more contact-us" href="contact.html">Contact Us</a>
+                         <a class="readon learn-more contact-us" href="#">Contact Us</a>
                      </div>
                  </div>
              </div>
@@ -270,72 +270,6 @@
      </div>
  </div>
  <!-- Process Section End -->
- <!-- Project Section Start -->
- <div class="rs-project bg5 style1 pt-120 md-pt-80">
-     <div class="container">
-         <div class="sec-title2 text-center mb-45 md-mb-30">
-             <span class="sub-text white-color">Project</span>
-             <h2 class="title white-color"> We Are Offering All Kinds of IT Solutions Services </h2>
-         </div>
-         <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30" data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800" data-dots="false" data-nav="false" data-nav-speed="false" data-center-mode="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2" data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="3" data-md-device-nav="true" data-md-device-dots="false">
-             <div class="project-item">
-                 <div class="project-img">
-                     <a href="case-studies-style1.html"><img src="<?= base_url('assets/front/') ?>images/project/main-home/1.jpg" alt="images"></a>
-                 </div>
-                 <div class="project-content">
-                     <h3 class="title"><a href="case-studies-style1.html">Product Design</a></h3>
-                     <span class="category"><a href="case-studies-style1.html">IT Technology</a></span>
-                 </div>
-             </div>
-             <div class="project-item">
-                 <div class="project-img">
-                     <a href="case-studies-style1.html"><img src="<?= base_url('assets/front/') ?>images/project/main-home/2.jpg" alt="images"></a>
-                 </div>
-                 <div class="project-content">
-                     <h3 class="title"><a href="case-studies-style1.html">Product Engineering</a></h3>
-                     <span class="category"><a href="case-studies-style1.html">IT Technology</a></span>
-                 </div>
-             </div>
-             <div class="project-item">
-                 <div class="project-img">
-                     <a href="case-studies-style1.html"><img src="<?= base_url('assets/front/') ?>images/project/main-home/3.jpg" alt="images"></a>
-                 </div>
-                 <div class="project-content">
-                     <h3 class="title"><a href="case-studies-style1.html">Analytic Solutions</a></h3>
-                     <span class="category"><a href="case-studies-style1.html">IT Technology</a></span>
-                 </div>
-             </div>
-             <div class="project-item">
-                 <div class="project-img">
-                     <a href="case-studies-style1.html"><img src="<?= base_url('assets/front/') ?>images/project/main-home/4.jpg" alt="images"></a>
-                 </div>
-                 <div class="project-content">
-                     <h3 class="title"><a href="case-studies-style1.html">Growth Strategies</a></h3>
-                     <span class="category"><a href="case-studies-style1.html">IT Technology</a></span>
-                 </div>
-             </div>
-             <div class="project-item">
-                 <div class="project-img">
-                     <a href="case-studies-style1.html"><img src="<?= base_url('assets/front/') ?>images/project/main-home/5.jpg" alt="images"></a>
-                 </div>
-                 <div class="project-content">
-                     <h3 class="title"><a href="case-studies-style1.html">Platform Integration</a></h3>
-                     <span class="category"><a href="case-studies-style1.html">IT Technology</a></span>
-                 </div>
-             </div>
-             <div class="project-item">
-                 <div class="project-img">
-                     <a href="case-studies-style1.html"><img src="<?= base_url('assets/front/') ?>images/project/main-home/6.jpg" alt="images"></a>
-                 </div>
-                 <div class="project-content">
-                     <h3 class="title"><a href="case-studies-style1.html">Innovative Interfaces</a></h3>
-                     <span class="category"><a href="case-studies-style1.html">IT Technology</a></span>
-                 </div>
-             </div>
-         </div>
-     </div>
- </div>
- <!-- Project Section End -->
  <!-- Blog Section Start -->
  <div id="rs-blog" class="rs-blog pb-120 pt-120 md-pt-80 md-pb-80">
      <div class="container">
@@ -465,7 +399,7 @@
  </div>
  <!-- Blog Section End -->
  <!-- Partner Start -->
- <div class="rs-partner pt-80 pb-70">
+ <!-- <div class="rs-partner pt-80 pb-70">
      <div class="container">
          <div class="rs-carousel owl-carousel" data-loop="true" data-items="5" data-margin="30" data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800" data-dots="false" data-nav="false" data-nav-speed="false" data-center-mode="false" data-mobile-device="2" data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="3" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2" data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="5" data-md-device-nav="false" data-md-device-dots="false">
              <div class="partner-item">
@@ -542,5 +476,5 @@
              </div>
          </div>
      </div>
- </div>
+ </div> -->
  <!-- Partner End -->

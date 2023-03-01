@@ -247,6 +247,15 @@ class Page extends CI_Controller
     {
         $this->load->view('not_found');
     }
+
+    public function kontak()
+    {
+        $data['title'] = "Kontak";
+        $data['deskripsi'] = "Kontak Informatika Uniba Madura";
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/kontak/kontak');
+        $this->load->view('layout/footer');
+    }
 }
 
 /* End of file User.php and path \application\controllers\User.php */

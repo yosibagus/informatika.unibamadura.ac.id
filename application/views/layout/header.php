@@ -46,7 +46,7 @@
             <header id="rs-header" class="rs-header style2">
                 <!-- Topbar Area Start -->
                 <div class="topbar-area style2">
-                    <div class="container">
+                    <div class="container-fluid">
                         <div class="row y-middle">
                             <div class="col-lg-8">
                                 <ul class="topbar-contact">
@@ -81,10 +81,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-3">
                                 <div class="logo-part">
-                                    <a href="index.html"><img src="<?= base_url('assets/front/') ?>logo/uniba_informatika.png" alt=""></a>
+                                    <a href="<?= base_url() ?>"><img src="<?= base_url('assets/front/') ?>logo/uniba_informatika.png" alt=""></a>
                                 </div>
                                 <div class="mobile-menu">
-                                    <a href="#" class="rs-menu-toggle rs-menu-toggle-close secondary">
+                                    <a href="<?= base_url() ?>" class="rs-menu-toggle rs-menu-toggle-close secondary">
                                         <i class="fa fa-bars"></i>
                                     </a>
                                 </div>
@@ -218,7 +218,7 @@
                                                     </ul> <!-- //.mega-menu -->
                                                 </li>
                                                 <li>
-                                                    <a href="contact.html">Kontak</a>
+                                                    <a href="<?= base_url('kontak') ?>">Kontak</a>
                                                 </li>
                                             </ul> <!-- //.nav-menu -->
                                         </nav>
