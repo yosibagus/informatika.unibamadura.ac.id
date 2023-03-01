@@ -218,6 +218,35 @@ class Page extends CI_Controller
         $this->load->view('user/akademik/prosedur/daftar_ulang_krs');
         $this->load->view('layout/footer');
     }
+
+    public function transkip_akademik()
+    {
+        $data['blog'] = $this->muser->getKategori(26)->row_array();
+        $data['informasi'] = $this->muser->getListInformasi($data['blog']['id_kategori'])->result_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['title'] = $data['blog']['nama_kategori'];
+        $data['deskripsi'] = $data['blog']['keterangan_kategori'];
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/akademik/prosedur/transkip_akademik', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function pkl()
+    {
+        $data['blog'] = $this->muser->getKategori(27)->row_array();
+        $data['informasi'] = $this->muser->getListInformasi($data['blog']['id_kategori'])->result_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['title'] = $data['blog']['nama_kategori'];
+        $data['deskripsi'] = $data['blog']['keterangan_kategori'];
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/akademik/prosedur/pkl', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function notfound()
+    {
+        $this->load->view('not_found');
+    }
 }
 
 /* End of file User.php and path \application\controllers\User.php */

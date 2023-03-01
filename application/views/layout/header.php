@@ -153,12 +153,12 @@
                                                                     <ul class="sub-menu">
                                                                         <li class="menu-title">Prosedur Akademik</li>
                                                                         <li><a href="<?= base_url('akademik/prosedur/daftar_ulang_krs') ?>">Daftar Ulang & KRS</a></li>
-                                                                        <li><a href="<?= base_url('akademik/prosedur/') ?>">Transkrip Akademik</a></li>
-                                                                        <li><a href="<?= base_url('akademik/prosedur/') ?>">Praktek Kerja Lapangan</a></li>
-                                                                        <li><a href="<?= base_url('akademik/prosedur/') ?>">Cuti</a></li>
-                                                                        <li><a href="<?= base_url('akademik/prosedur/') ?>">Seminar & Sidang Skripsi</a></li>
-                                                                        <li><a href="<?= base_url('akademik/prosedur/') ?>">Yudisium</a></li>
-                                                                        <li><a href="<?= base_url('akademik/prosedur/') ?>">Wisuda</a></li>
+                                                                        <li><a href="<?= base_url('akademik/prosedur/transkip_akademik') ?>">Transkrip Akademik</a></li>
+                                                                        <li><a href="<?= base_url('akademik/prosedur/pkl') ?>">Praktek Kerja Lapangan</a></li>
+                                                                        <li><a href="<?= base_url('akademik/prosedur/cuti') ?>">Cuti</a></li>
+                                                                        <li><a href="<?= base_url('akademik/prosedur/sempro_skripsi') ?>">Seminar & Sidang Skripsi</a></li>
+                                                                        <li><a href="<?= base_url('akademik/prosedur/yudisium') ?>">Yudisium</a></li>
+                                                                        <li><a href="<?= base_url('akademik/prosedur/wisuda') ?>">Wisuda</a></li>
                                                                         <li class="last-item"><a href="onepage7.html">Dukumen Akademik</a></li>
                                                                     </ul>
                                                                 </div>

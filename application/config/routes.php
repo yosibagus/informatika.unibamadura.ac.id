@@ -2,7 +2,7 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 
 $route['default_controller'] = 'page';
-$route['404_override'] = '';
+$route['404_override'] = 'page/notfound';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['profil/sejarah'] = 'page/sejarah';
@@ -23,3 +23,5 @@ $route['akademik/pendidikan/sistem_pendidikan'] = 'page/sistem_pendidikan';
 $route['akademik/pendidikan/kalender_akademik'] = 'page/kalender_akademik';
 $route['akademik/pendidikan/mbkm'] = 'page/mbkm';
 $route['akademik/prosedur/daftar_ulang_krs'] = 'page/daftar_ulang_krs';
+$route['akademik/prosedur/transkip_akademik'] = 'page/transkip_akademik';
+$route['akademik/prosedur/pkl'] = 'page/pkl';
