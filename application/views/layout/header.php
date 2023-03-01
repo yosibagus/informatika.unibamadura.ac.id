@@ -145,20 +145,20 @@
                                                                         <li class="menu-title">Pendidikan</li>
                                                                         <li><a href="<?= base_url('akademik/pendidikan/sistem_pendidikan') ?>">Sistem Pendidikan</a></li>
                                                                         <li><a href="<?= base_url('akademik/pendidikan/kalender_akademik') ?>">Kalender Akademik</a></li>
-                                                                        <li><a href="index10.html">Jadwal Kuliah</a></li>
-                                                                        <li><a href="index10.html">MBKM</a></li>
+                                                                        <li><a href="">Jadwal Kuliah</a></li>
+                                                                        <li><a href="<?= base_url('akademik/pendidikan/mbkm') ?>">MBKM</a></li>
                                                                     </ul>
                                                                 </div>
                                                                 <div class="single-megamenu">
                                                                     <ul class="sub-menu">
                                                                         <li class="menu-title">Prosedur Akademik</li>
-                                                                        <li><a href="onepage1.html">Daftar Ulang & KRS</a></li>
-                                                                        <li><a href="onepage2.html">Transkrip Akademik</a></li>
-                                                                        <li><a href="onepage3.html">Praktek Kerja Lapangan</a></li>
-                                                                        <li><a href="onepage4.html">Cuti</a></li>
-                                                                        <li><a href="onepage5.html">Seminar & Sidang Skripsi</a></li>
-                                                                        <li><a href="onepage6.html">Yudisium</a></li>
-                                                                        <li><a href="onepage6.html">Wisuda</a></li>
+                                                                        <li><a href="<?= base_url('akademik/prosedur/daftar_ulang_krs') ?>">Daftar Ulang & KRS</a></li>
+                                                                        <li><a href="<?= base_url('akademik/prosedur/') ?>">Transkrip Akademik</a></li>
+                                                                        <li><a href="<?= base_url('akademik/prosedur/') ?>">Praktek Kerja Lapangan</a></li>
+                                                                        <li><a href="<?= base_url('akademik/prosedur/') ?>">Cuti</a></li>
+                                                                        <li><a href="<?= base_url('akademik/prosedur/') ?>">Seminar & Sidang Skripsi</a></li>
+                                                                        <li><a href="<?= base_url('akademik/prosedur/') ?>">Yudisium</a></li>
+                                                                        <li><a href="<?= base_url('akademik/prosedur/') ?>">Wisuda</a></li>
                                                                         <li class="last-item"><a href="onepage7.html">Dukumen Akademik</a></li>
                                                                     </ul>
                                                                 </div>

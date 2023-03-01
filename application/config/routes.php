@@ -21,3 +21,5 @@ $route['informasi/surat_edaran'] = 'page/surat_edaran';
 
 $route['akademik/pendidikan/sistem_pendidikan'] = 'page/sistem_pendidikan';
 $route['akademik/pendidikan/kalender_akademik'] = 'page/kalender_akademik';
+$route['akademik/pendidikan/mbkm'] = 'page/mbkm';
+$route['akademik/prosedur/daftar_ulang_krs'] = 'page/daftar_ulang_krs';

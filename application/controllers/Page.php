@@ -195,6 +195,29 @@ class Page extends CI_Controller
         $this->load->view('user/akademik/pendidikan/kalender_akademik');
         $this->load->view('layout/footer');
     }
+
+    public function mbkm()
+    {
+        $data['blog'] = $this->muser->getKategori(25)->row_array();
+        $data['informasi'] = $this->muser->getListInformasi($data['blog']['id_kategori'])->result_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['title'] = $data['blog']['nama_kategori'];
+        $data['deskripsi'] = $data['blog']['keterangan_kategori'];
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/akademik/pendidikan/mbkm', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function daftar_ulang_krs()
+    {
+        $data['blog'] = $this->muser->getSingleBlog(17)->row_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['title'] = $data['blog']['judul_blog'];
+        $data['deskripsi'] = $data['blog']['sub_blog'];
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/akademik/prosedur/daftar_ulang_krs');
+        $this->load->view('layout/footer');
+    }
 }
 
 /* End of file User.php and path \application\controllers\User.php */
