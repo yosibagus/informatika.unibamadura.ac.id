@@ -74,7 +74,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="copyright">
-                        <p>&copy; 2022 All Rights Reserved. Developed By <a style="color: darkblue;" href="https://yosibgsdr.site/">Yosi Bagus Sadar Rasuli</a>
+                        <p>&copy; 2022 All Rights Reserved. Developed By <a style="color: darkblue;" href="https://yosibgsdr.site/">Tim IT</a>
                         </p>
                     </div>
                 </div>
