@@ -425,6 +425,19 @@ class Page extends CI_Controller
         $this->load->view('layout/footer');
     }
 
+    public function prestasi_mahasiswa()
+    {
+        $data['blog'] = $this->muser->getDetailKategori('29bd8466a055f706ff34b175c3e43afe')->row_array();
+        $data['informasi'] = $this->muser->getListInformasi($data['blog']['id_kategori'])->result_array();
+        $data['kategori'] = $this->muser->kategoriNonInformasi()->result_array();
+        $data['kategori_all'] = $this->muser->kategoriNonInformasi('informasi')->result_array();
+        $data['title'] = $data['blog']['nama_kategori'];
+        $data['deskripsi'] = $data['blog']['keterangan_kategori'];
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/kemahasiswaan/prestasi/prestasi_mahasiswa');
+        $this->load->view('layout/footer');
+    }
+
     public function notfound()
     {
         $this->load->view('not_found');

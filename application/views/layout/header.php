@@ -202,8 +202,8 @@
                                                                 <div class="single-megamenu">
                                                                     <ul class="sub-menu">
                                                                         <li class="menu-title">Prestasi & PMB</li>
-                                                                        <li><a href="index10.html">Prestasi Mahasiswa</a></li>
-                                                                        <li><a href="onepage1.html">Penerimaan Mahasiswa Baru</a></li>
+                                                                        <li><a href="<?= base_url('kemahasiswaan/prestasi/prestasi_mahasiswa') ?>">Prestasi Mahasiswa</a></li>
+                                                                        <li><a href="https://pmb.unibamadura.ac.id/" target="_blank">Penerimaan Mahasiswa Baru</a></li>
                                                                     </ul>
                                                                 </div>
                                                                 <div class="single-megamenu">
@@ -211,7 +211,6 @@
                                                                         <li class="menu-title">ORMAWA</li>
                                                                         <li><a href="onepage8.html">Kegiatan Mahasiswa</a></li>
                                                                         <li><a href="onepage8.html">HIMAIF</a></li>
-                                                                        <!-- <li class="last-item"><a href="onepage14.html">Data Alumni</a></li> -->
                                                                     </ul>
                                                                 </div>
                                                             </div>
