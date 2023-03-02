@@ -209,8 +209,8 @@
                                                                 <div class="single-megamenu">
                                                                     <ul class="sub-menu">
                                                                         <li class="menu-title">ORMAWA</li>
-                                                                        <li><a href="onepage8.html">Kegiatan Mahasiswa</a></li>
-                                                                        <li><a href="onepage8.html">HIMAIF</a></li>
+                                                                        <li><a href="<?= base_url('kemahasiswaan/ormawa/kegiatan_mahasiswa') ?>">Kegiatan Mahasiswa</a></li>
+                                                                        <li><a href="<?= base_url('kemahasiswaan/ormawa/himatif') ?>">HIMAIF</a></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>

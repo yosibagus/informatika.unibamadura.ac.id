@@ -42,5 +42,7 @@ $route['kemahasiswaan/informasi/info_beasiswa'] = 'page/info_beasiswa';
 $route['kemahasiswaan/informasi/info_yudisium'] = 'page/info_yudisium';
 $route['kemahasiswaan/informasi/info_wisuda'] = 'page/info_wisuda';
 $route['kemahasiswaan/prestasi/prestasi_mahasiswa'] = 'page/prestasi_mahasiswa';
+$route['kemahasiswaan/ormawa/kegiatan_mahasiswa'] = 'page/kegiatan_mahasiswa';
+$route['kemahasiswaan/ormawa/himatif'] = 'page/himatif';
 
 $route['kontak'] = 'page/kontak';

@@ -438,6 +438,31 @@ class Page extends CI_Controller
         $this->load->view('layout/footer');
     }
 
+    public function kegiatan_mahasiswa()
+    {
+        $data['blog'] = $this->muser->getDetailKategori('1d6ce6dfd84254ec1febdebb0a396550')->row_array();
+        $data['informasi'] = $this->muser->getListInformasi($data['blog']['id_kategori'])->result_array();
+        $data['kategori'] = $this->muser->kategoriNonInformasi()->result_array();
+        $data['kategori_all'] = $this->muser->kategoriNonInformasi('informasi')->result_array();
+        $data['title'] = $data['blog']['nama_kategori'];
+        $data['deskripsi'] = $data['blog']['keterangan_kategori'];
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/kemahasiswaan/ormawa/kegiatan_mahasiswa');
+        $this->load->view('layout/footer');
+    }
+
+    public function himatif()
+    {
+        $data['blog'] = $this->muser->getKategori(49)->row_array();
+        $data['informasi'] = $this->muser->getListInformasi($data['blog']['id_kategori'])->result_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['title'] = $data['blog']['nama_kategori'];
+        $data['deskripsi'] = $data['blog']['keterangan_kategori'];
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/kemahasiswaan/ormawa/himatif', $data);
+        $this->load->view('layout/footer');
+    }
+
     public function notfound()
     {
         $this->load->view('not_found');
