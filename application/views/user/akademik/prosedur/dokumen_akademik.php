@@ -31,7 +31,7 @@
                 <div class="table-responsive">
                     <table class="table table-hover" id="tableDokumen">
                         <thead>
-                            <tr>
+                            <tr style="background: #03228f;color: #fff;">
                                 <th class="text-center">No.</th>
                                 <th>Nama Dokumen</th>
                                 <th>Keterangan</th>

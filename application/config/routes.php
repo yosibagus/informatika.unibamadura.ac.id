@@ -32,5 +32,7 @@ $route['akademik/prosedur/cuti'] = 'page/cuti';
 $route['akademik/prosedur/yudisium'] = 'page/yudisium';
 $route['akademik/prosedur/wisuda'] = 'page/wisuda';
 $route['akademik/prosedur/dokumen_akademik'] = 'page/dokumen_akademik';
+$route['akademik/sdm/data_mahasiswa'] = 'page/data_mahasiswa';
+$route['akademik/sdm/data_alumni'] = 'page/data_alumni';
 
 $route['kontak'] = 'page/kontak';

@@ -167,8 +167,8 @@
                                                                 <div class="single-megamenu">
                                                                     <ul class="sub-menu">
                                                                         <li class="menu-title">SDM</li>
-                                                                        <li><a href="onepage8.html">Data Mahasiswa</a></li>
-                                                                        <li class="last-item"><a href="onepage14.html">Data Alumni</a></li>
+                                                                        <li><a href="<?= base_url('akademik/sdm/data_mahasiswa') ?>">Data Mahasiswa</a></li>
+                                                                        <li class="last-item"><a href="<?= base_url('akademik/sdm/data_alumni') ?>">Data Alumni</a></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>

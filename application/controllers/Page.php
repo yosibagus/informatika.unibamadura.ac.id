@@ -339,6 +339,30 @@ class Page extends CI_Controller
         $this->load->view('layout/footer');
     }
 
+    public function data_mahasiswa()
+    {
+        $data['blog'] = $this->muser->getKategori(36)->row_array();
+        $data['informasi'] = $this->muser->getListInformasi($data['blog']['id_kategori'])->result_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['title'] = $data['blog']['nama_kategori'];
+        $data['deskripsi'] = $data['blog']['keterangan_kategori'];
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/akademik/sdm/data_mahasiswa');
+        $this->load->view('layout/footer');
+    }
+
+    public function data_alumni()
+    {
+        $data['blog'] = $this->muser->getKategori(38)->row_array();
+        $data['informasi'] = $this->muser->getListInformasi($data['blog']['id_kategori'])->result_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['title'] = $data['blog']['nama_kategori'];
+        $data['deskripsi'] = $data['blog']['keterangan_kategori'];
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/akademik/sdm/data_alumni');
+        $this->load->view('layout/footer');
+    }
+
 
     public function notfound()
     {
