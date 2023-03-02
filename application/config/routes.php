@@ -38,4 +38,8 @@ $route['akademik/sdm/data_alumni'] = 'page/data_alumni';
 $route['penelitian_pengabdian/panduan_penelitian'] = 'page/panduan_penelitian';
 $route['penelitian_pengabdian/hasil_penelitian'] = 'page/hasil_penelitian';
 
+$route['kemahasiswaan/informasi/info_beasiswa'] = 'page/info_beasiswa';
+$route['kemahasiswaan/informasi/info_yudisium'] = 'page/info_yudisium';
+$route['kemahasiswaan/informasi/info_wisuda'] = 'page/info_wisuda';
+
 $route['kontak'] = 'page/kontak';

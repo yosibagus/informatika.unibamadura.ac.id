@@ -194,9 +194,9 @@
                                                                 <div class="single-megamenu">
                                                                     <ul class="sub-menu" style="background-color: white;">
                                                                         <li class="menu-title">Informasi</li>
-                                                                        <li><a href="index8.html">Informasi Beasiswa</a></li>
-                                                                        <li><a href="index9.html">Informasi Yudisium</a></li>
-                                                                        <li><a href="index10.html">Informasi Wisuda</a></li>
+                                                                        <li><a href="<?= base_url('kemahasiswaan/informasi/info_beasiswa') ?>">Informasi Beasiswa</a></li>
+                                                                        <li><a href="<?= base_url('kemahasiswaan/informasi/info_yudisium') ?>">Informasi Yudisium</a></li>
+                                                                        <li><a href="<?= base_url('kemahasiswaan/informasi/info_wisuda') ?>">Informasi Wisuda</a></li>
                                                                     </ul>
                                                                 </div>
                                                                 <div class="single-megamenu">
