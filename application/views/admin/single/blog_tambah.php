@@ -26,11 +26,34 @@
                     <label for="file_blog">File</label>
                 </div>
             </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-floating">
+                            <select name="id_menu" id="id_menu" class="form-control">
+                                <?php foreach ($menu as $get) : ?>
+                                    <option value="<?= $get['id_menu'] ?>"><?= $get['nama_menu'] ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                            <label for="file_blog">Menu</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-floating">
+                            <select name="publish" id="publish" class="form-control">
+                                <option value="1">Ya</option>
+                                <option value="0">Tidak</option>
+                            </select>
+                            <label for="file_blog">Publish</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-12 gy-6">
                 <textarea id="deskripsi_blog" name="deskripsi_blog" class="ckeditor"></textarea>
             </div>
             <div class="col-12 gy-6">
-                <textarea id="informasi" name="informasi"></textarea>
+                <textarea id="informasi" name="informasi" hidden></textarea>
             </div>
             <div class="col-12 gy-6">
                 <div class="row g-3 justify-content-end">

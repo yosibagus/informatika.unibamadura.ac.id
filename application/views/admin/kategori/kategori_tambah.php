@@ -9,10 +9,20 @@
 <div class="row">
     <div class="col-xl-9">
         <form class="row g-3 mb-6">
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <div class="form-floating">
                     <input class="form-control" id="nama_kategori" type="text" placeholder="Project title" />
                     <label for="nama_kategori">Nama Kategori</label>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-floating">
+                    <select name="id_menu" id="id_menu" class="form-control">
+                        <?php foreach ($menu as $get) : ?>
+                            <option value="<?= $get['id_menu'] ?>"><?= $get['nama_menu'] ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                    <label for="file_blog">Menu</label>
                 </div>
             </div>
             <div class="col-12 gy-6">
@@ -39,13 +49,15 @@
     function simpanKategori() {
         var nama_kategori = $("#nama_kategori").val();
         var keterangan_kategori = $("#keterangan_kategori").val();
+        var id_menu = $("#id_menu").val();
         $.ajax({
             type: "POST",
             url: "<?= base_url('core/kategori_add') ?>",
             dataType: "json",
             data: {
                 nama_kategori: nama_kategori,
-                keterangan_kategori: keterangan_kategori
+                keterangan_kategori: keterangan_kategori,
+                id_menu: id_menu
             },
             success: function(data) {
                 VanillaToasts.create({

@@ -34,10 +34,12 @@ class Core extends CI_Controller
         $kode = random_string('md5');
         $kategori = $this->input->post('nama_kategori');
         $keterangan = $this->input->post('keterangan_kategori');
+        $id_menu = $this->input->post('id_menu');
         $data = [
             'kode_kategori' => $kode,
             'nama_kategori' => $kategori,
-            'keterangan_kategori' => $keterangan
+            'keterangan_kategori' => $keterangan,
+            'id_menu' => $id_menu
         ];
 
         $this->mcore->addKategori($data);
@@ -91,10 +93,11 @@ class Core extends CI_Controller
                 'judul_blog' => $this->input->post('judul_blog'),
                 'sub_blog' => $this->input->post('sub_judul'),
                 'deskripsi_blog' => $this->input->post('informasi'),
+                'id_menu' => $this->input->post('id_menu'),
                 'file_blog' => '',
                 'tipe_file' => '',
                 'ukuran_file' => '',
-                'publish_blog' => 1
+                'publish_blog' => $this->input->post('publish')
             ];
             $this->db->insert('master_blog', $input);
         } else {
@@ -103,15 +106,14 @@ class Core extends CI_Controller
                 'judul_blog' => $this->input->post('judul_blog'),
                 'sub_blog' => $this->input->post('sub_judul'),
                 'deskripsi_blog' => $this->input->post('informasi'),
+                'id_menu' => $this->input->post('id_menu'),
                 'file_blog' => $data['file_name'],
                 'tipe_file' => $data['file_ext'],
                 'ukuran_file' => $data['file_size'],
-                'publish_blog' => 1
+                'publish_blog' => $this->input->post('publish')
             ];
             $this->db->insert('master_blog', $input);
         }
-
-        // echo json_encode($data);
         echo json_encode($data);
     }
 
@@ -207,7 +209,7 @@ class Core extends CI_Controller
                 ' . $i++ . '
             </td>
             <td class="tags align-middle review pb-2 ps-4" style="min-width:225px;">
-                <a href="' . base_url('algoritma/#/sub_kategori/') . '">' . $get['judul_informasi'] . '</a>
+                <a href="' . base_url('algoritma/#/informasi_detail/') . $get['token_informasi'] . '">' . $get['judul_informasi'] . '</a>
             </td>
             <td class="tags align-middle review pb-2 ps-4" style="min-width:225px;">
                 ' . $get['deskripsi_informasi'] . '
@@ -305,7 +307,78 @@ class Core extends CI_Controller
 
     public function blog_edit()
     {
-        $data = [];
+        $config['upload_path']          = './assets/foto/upload/';
+        $config['allowed_types']        = 'gif|jpg|png|pdf';
+        $config['max_width']            = 10024;
+
+        $this->load->library('upload', $config);
+
+        $id = $this->input->post('id_blog');
+
+        if (!$this->upload->do_upload('file_blog')) {
+            $data = array('error' => $this->upload->display_errors());
+            $input = [
+                'judul_blog' => $this->input->post('judul_blog'),
+                'sub_blog' => $this->input->post('sub_judul'),
+                'deskripsi_blog' => $this->input->post('informasi'),
+                'publish_blog' => 1
+            ];
+        } else {
+            $data = $this->upload->data();
+            $input = [
+                'judul_blog' => $this->input->post('judul_blog'),
+                'sub_blog' => $this->input->post('sub_judul'),
+                'deskripsi_blog' => $this->input->post('informasi'),
+                'file_blog' => $data['file_name'],
+                'tipe_file' => $data['file_ext'],
+                'ukuran_file' => $data['file_size'],
+                'publish_blog' => 1
+            ];
+        }
+        $this->db->where('id_blog', $id);
+        $this->db->update('master_blog', $input);
+        echo json_encode($data);
+    }
+
+    public function informasi_edit($id)
+    {
+        $config['upload_path']          = './assets/foto/informasi/';
+        $config['allowed_types']        = 'gif|jpg|png|pdf|docx|doc|xls';
+        $config['max_width']            = 5024;
+
+        $this->load->library('upload', $config);
+        $this->load->helper('string');
+
+        if (!$this->upload->do_upload('file_informasi')) {
+            $data = array('error' => $this->upload->display_errors());
+            $input = [
+                'status_informasi' => $this->input->post('status_informasi'),
+                'judul_informasi' => $this->input->post('judul_informasi'),
+                'deskripsi_informasi' => $this->input->post('deskripsi_informasi'),
+                'tgl_informasi' => $this->input->post('tgl_informasi'),
+                'lokasi_informasi' => $this->input->post('lokasi_informasi'),
+                'isi_informasi' => $this->input->post('informasi'),
+                'id_akses' => 1
+            ];
+        } else {
+            $data = $this->upload->data();
+            $input = [
+                'judul_informasi' => $this->input->post('judul_informasi'),
+                'lokasi_informasi' => $this->input->post('lokasi_informasi'),
+                'deskripsi_informasi' => $this->input->post('deskripsi_informasi'),
+                'isi_informasi' => $this->input->post('informasi'),
+                'tgl_informasi' => $this->input->post('tgl_informasi'),
+                'id_akses' => 1,
+                'status_informasi' => $this->input->post('status_informasi'),
+                'file_informasi' => $data['file_name'],
+                'tipefile_informasi' => $data['file_ext'],
+            ];
+        }
+
+        $this->db->where('id_informasi', $id);
+        $this->db->update('master_informasi', $input);
+
+        echo json_encode($input);
     }
 }
 

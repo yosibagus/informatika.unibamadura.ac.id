@@ -28,6 +28,15 @@ class Core_model extends CI_Model
     {
         return $this->db->get_where('master_informasi', ['id_kategori' => $id]);
     }
+
+    public function getDetailInformasi($token)
+    {
+        $this->db->select('*');
+        $this->db->from('master_informasi');
+        $this->db->join('master_kategori', 'master_kategori.id_kategori = master_informasi.id_kategori', 'left');
+        $this->db->where('master_informasi.token_informasi', $token);
+        return $this->db->get();
+    }
 }
 
 

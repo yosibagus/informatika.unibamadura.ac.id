@@ -7,6 +7,7 @@ class Algoritma extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('Core_model', 'mcore');
     }
 
     public function index()
@@ -27,7 +28,8 @@ class Algoritma extends CI_Controller
 
     public function kategori_tambah()
     {
-        $this->load->view('admin/kategori/kategori_tambah');
+        $data['menu'] = $this->db->get('master_menu')->result_array();
+        $this->load->view('admin/kategori/kategori_tambah', $data);
     }
 
     public function single_blog()
@@ -43,7 +45,8 @@ class Algoritma extends CI_Controller
 
     public function blog_tambah()
     {
-        $this->load->view('admin/single/blog_tambah');
+        $data['menu'] = $this->db->get('master_menu')->result_array();
+        $this->load->view('admin/single/blog_tambah', $data);
     }
 
     public function detail_kategori($id)
@@ -62,6 +65,12 @@ class Algoritma extends CI_Controller
     {
         $data['blog'] = $this->db->get_where('master_blog', ['id_blog' => $id])->row_array();
         $this->load->view('admin/single/detail_single', $data);
+    }
+
+    public function informasi_detail($token)
+    {
+        $data['detail'] = $this->mcore->getDetailInformasi($token)->row_array();
+        $this->load->view('admin/kategori/informasi_edit', $data);
     }
 }
 

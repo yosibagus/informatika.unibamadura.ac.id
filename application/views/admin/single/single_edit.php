@@ -29,7 +29,7 @@
                     <input class="form-control" id="file_blog" name="file_blog" type="file" placeholder="Project title" />
                     <label for="file_blog">File</label>
                 </div>
-                <a href=""><i><small>File Origin: <?= $blog['file_blog'] ?></small></i></a>
+                <a href="<?= base_url('assets/foto/upload/') . $blog['file_blog'] ?>"><i><small>File Origin: <?= $blog['file_blog'] ?></small></i></a>
             </div>
             <div class="col-sm-6">
                 <div class="form-floating">
@@ -45,6 +45,7 @@
             </div>
             <div class="col-12 gy-6">
                 <textarea id="informasi" name="informasi" hidden><?= $blog['deskripsi_blog'] ?></textarea>
+                <input type="text" name="id_blog" name="id_blog" value="<?= $blog['id_blog'] ?>" hidden>
             </div>
             <div class="col-12 gy-6">
                 <div class="row g-3 justify-content-end">
