@@ -64,10 +64,16 @@
                     <div class="navbar-vertical-content">
                         <ul class="navbar-nav flex-column" id="navbarVerticalNav">
                             <li class="nav-item">
-                                <span class="nav-item-wrapper"><a class="nav-link dropdown-indicator label-1" href="#home" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="home">
+                                <span class="nav-item-wrapper">
+                                    <a class="nav-link dropdown-indicator label-1" href="#home" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="home">
                                         <div class="d-flex align-items-center">
-                                            <div class="dropdown-indicator-icon"><span class="fas fa-caret-right"></span>
-                                            </div><span class="nav-link-icon"><span data-feather="pie-chart"></span></span><span class="nav-link-text">Home</span>
+                                            <div class="dropdown-indicator-icon">
+                                                <span class="fas fa-caret-right"></span>
+                                            </div>
+                                            <span class="nav-link-icon">
+                                                <span data-feather="pie-chart"></span>
+                                            </span>
+                                            <span class="nav-link-text">Home</span>
                                         </div>
                                     </a>
                                     <div class="parent-wrapper label-1">
@@ -76,40 +82,99 @@
                                             <li class="nav-item"><a class="nav-link" href="<?= base_url('algoritma/#/home') ?>" data-bs-toggle="" aria-expanded="false">
                                             <li class="nav-item"><a class="nav-link" href="<?= base_url('algoritma/#/home') ?>" data-bs-toggle="" aria-expanded="false">
                                                     <div class="d-flex align-items-center"><span class="nav-link-text">Dashboard</span></div>
-                                                </a><!-- more inner pages-->
+                                                </a>
                                             </li>
                                             <li class="nav-item"><a class="nav-link" href="dashboard/project-management.html" data-bs-toggle="" aria-expanded="false">
                                                     <div class="d-flex align-items-center"><span class="nav-link-text">Data Diri</span></div>
-                                                </a><!-- more inner pages-->
+                                                </a>
                                             </li>
                                             <li class="nav-item"><a class="nav-link" href="landing.html" data-bs-toggle="" aria-expanded="false">
                                                     <div class="d-flex align-items-center"><span class="nav-link-text">Submit Project</span></div>
-                                                </a><!-- more inner pages-->
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>
                                 </span>
                             </li>
                             <li class="nav-item">
-                                <!-- label-->
                                 <p class="navbar-vertical-label">Master</p>
                                 <hr class="navbar-vertical-line" />
-
                             </li>
-                            <div class="nav-item-wrapper"><a class="nav-link label-1" href="<?= base_url('algoritma/#/kategori') ?>" role="button" data-bs-toggle="" aria-expanded="false">
-                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor">
-                                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                                <line x1="8" y1="21" x2="16" y2="21"></line>
-                                                <line x1="12" y1="17" x2="12" y2="21"></line>
-                                            </svg></span><span class="nav-link-text-wrapper"><span class="nav-link-text">Multi Blog</span></span></div>
-                                </a></div>
-                            <div class="nav-item-wrapper"><a class="nav-link label-1" href="<?= base_url('algoritma/#/single_blog') ?>" role="button" data-bs-toggle="" aria-expanded="false">
-                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor">
-                                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                                <line x1="8" y1="21" x2="16" y2="21"></line>
-                                                <line x1="12" y1="17" x2="12" y2="21"></line>
-                                            </svg></span><span class="nav-link-text-wrapper"><span class="nav-link-text">Single Blog</span></span></div>
-                                </a></div>
+                            <div class="nav-item-wrapper">
+                                <a class="nav-link label-1" href="<?= base_url('algoritma/#/single_blog') ?>" role="button" data-bs-toggle="" aria-expanded="false">
+                                    <div class="d-flex align-items-center">
+                                        <span class="nav-link-icon">
+                                            <span data-feather="file"></span>
+                                        </span>
+                                        <span class="nav-link-text-wrapper">
+                                            <span class="nav-link-text">Single Blog</span>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="nav-item-wrapper">
+                                <a class="nav-link label-1" href="<?= base_url('algoritma/#/kategori') ?>" role="button" data-bs-toggle="" aria-expanded="false">
+                                    <div class="d-flex align-items-center">
+                                        <span class="nav-link-icon">
+                                            <span data-feather="file-text"></span>
+                                        </span>
+                                        <span class="nav-link-text-wrapper"><span class="nav-link-text">Multi Blog</span>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <li class="nav-item">
+                                <p class="navbar-vertical-label">Main Menu</p>
+                                <hr class="navbar-vertical-line" />
+                            </li>
+
+                            <?php foreach ($menu as $get) : ?>
+                                <li class="nav-item">
+                                    <span class="nav-item-wrapper">
+                                        <a class="nav-link dropdown-indicator label-1" href="#mainmenu<?= $get['id_menu'] ?>" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="mainmenu<?= $get['id_menu'] ?>">
+                                            <div class="d-flex align-items-center">
+                                                <div class="dropdown-indicator-icon">
+                                                    <span class="fas fa-caret-right"></span>
+                                                </div>
+                                                <span class="nav-link-icon">
+                                                    <span data-feather="<?= $get['icon'] ?>"></span>
+                                                </span>
+                                                <span class="nav-link-text"><?= $get['nama_menu'] ?></span>
+                                            </div>
+                                        </a>
+                                        <div class="parent-wrapper label-1">
+                                            <ul class="nav collapse parent" data-bs-parent="#navbarVerticalCollapse" id="mainmenu<?= $get['id_menu'] ?>">
+                                                <p class="collapsed-nav-item-title d-none"><?= $get['nama_menu'] ?></p>
+                                                <?php $data = $this->db->get_where('master_blog', ['id_menu' => $get['id_menu']])->result_array(); ?>
+                                                <?php foreach ($data as $val) : ?>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="<?= base_url('algoritma/#/home') ?>" data-bs-toggle="" aria-expanded="false">
+                                                            <div class="d-flex align-items-center"><span class="nav-link-text"><?= $val['judul_blog'] ?></span></div>
+                                                        </a>
+                                                    </li>
+                                                <?php endforeach; ?>
+
+                                                <?php $data = $this->db->get_where('master_kategori', ['id_menu' => $get['id_menu']])->result_array(); ?>
+                                                <?php foreach ($data as $val) : ?>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="<?= base_url('algoritma/#/detail_kategori/') . $val['id_kategori'] . "/" . $val['kode_kategori'] ?>" data-bs-toggle="" aria-expanded="false">
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="nav-link-text">
+                                                                    <?php $jumlah = strlen($val['nama_kategori']);
+                                                                            $kategori = $jumlah > 20 ? substr($val['nama_kategori'], 0, 20) . " ..." : $val['nama_kategori'];
+                                                                            echo $kategori;
+                                                                            ?>
+                                                                </span>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                        </div>
+                                    </span>
+                                </li>
+                            <?php endforeach; ?>
                         </ul>
                     </div>
                 </div>
@@ -121,8 +186,8 @@
                         <button class="btn navbar-toggler navbar-toggler-humburger-icon hover-bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarVerticalCollapse" aria-controls="navbarVerticalCollapse" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
                         <a class="navbar-brand me-1 me-sm-3" href="index.html">
                             <div class="d-flex align-items-center">
-                                <div class="d-flex align-items-center"><img src="<?= base_url('assets/back/') ?>assets/img/icons/logo.png" alt="phoenix" width="27" />
-                                    <p class="logo-text ms-2 d-none d-sm-block">phoenix</p>
+                                <div class="d-flex align-items-center"><img src="<?= base_url('assets/front/logo/informatika.png') ?>" alt="phoenix" width="27" />
+                                    <p class="logo-text ms-2 d-none d-sm-block">Informatika</p>
                                 </div>
                             </div>
                         </a>
@@ -1028,7 +1093,7 @@
     <script src="<?= base_url('assets/back/') ?>assets/js/ecommerce-dashboard.js"></script>
 
     <script>
-        var baseurl = "http://192.168.1.128/informatika.unibamadura.ac.id/";
+        var baseurl = "http://localhost/informatika.unibamadura.ac.id/";
 
         function loadContent(hash) {
             if (hash == '') {

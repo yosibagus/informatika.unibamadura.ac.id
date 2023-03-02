@@ -11,7 +11,8 @@ class Algoritma extends CI_Controller
 
     public function index()
     {
-        $this->load->view('template/template');
+        $data['menu'] = $this->db->get('master_menu')->result_array();
+        $this->load->view('template/template', $data);
     }
 
     public function home()

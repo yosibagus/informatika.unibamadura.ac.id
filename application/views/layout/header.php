@@ -52,7 +52,7 @@
                                 <ul class="topbar-contact">
                                     <li>
                                         <i class="flaticon-email"></i>
-                                        <a href="mailto:support@rstheme.com">informatika@unibamadura.ac.id</a>
+                                        <a href="mailto:informatika@unibamadura.ac.id">informatika@unibamadura.ac.id</a>
                                     </li>
                                     <li>
                                         <i class="flaticon-location"></i> Jl. Raya Lenteng, Aredake, Kec. Batuan, Kab.
@@ -123,7 +123,7 @@
                                                     </ul>
                                                 </li>
                                                 <li class="menu-item-has-children">
-                                                    <a href="blog.html">Informasi</a>
+                                                    <a href="blog.html">Berita</a>
                                                     <ul class="sub-menu">
                                                         <?php $data = $this->db->get_where('master_kategori', ['url' => 'informasi'])->result_array(); ?>
                                                         <?php foreach ($data as $get) : ?>
