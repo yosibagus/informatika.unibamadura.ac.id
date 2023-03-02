@@ -363,6 +363,31 @@ class Page extends CI_Controller
         $this->load->view('layout/footer');
     }
 
+    //penelitian dan pengabdian
+
+    public function panduan_penelitian()
+    {
+        $data['blog'] = $this->muser->getKategori(42)->row_array();
+        $data['informasi'] = $this->muser->getListInformasi($data['blog']['id_kategori'])->result_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['title'] = $data['blog']['nama_kategori'];
+        $data['deskripsi'] = $data['blog']['keterangan_kategori'];
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/penelitian_pengabdian/panduan', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function hasil_penelitian()
+    {
+        $data['blog'] = $this->muser->getKategori(43)->row_array();
+        $data['informasi'] = $this->muser->getListInformasi($data['blog']['id_kategori'])->result_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['title'] = $data['blog']['nama_kategori'];
+        $data['deskripsi'] = $data['blog']['keterangan_kategori'];
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/penelitian_pengabdian/hasil_penelitian', $data);
+        $this->load->view('layout/footer');
+    }
 
     public function notfound()
     {

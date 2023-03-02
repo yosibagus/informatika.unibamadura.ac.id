@@ -35,4 +35,7 @@ $route['akademik/prosedur/dokumen_akademik'] = 'page/dokumen_akademik';
 $route['akademik/sdm/data_mahasiswa'] = 'page/data_mahasiswa';
 $route['akademik/sdm/data_alumni'] = 'page/data_alumni';
 
+$route['penelitian_pengabdian/panduan_penelitian'] = 'page/panduan_penelitian';
+$route['penelitian_pengabdian/hasil_penelitian'] = 'page/hasil_penelitian';
+
 $route['kontak'] = 'page/kontak';

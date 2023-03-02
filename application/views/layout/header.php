@@ -178,9 +178,8 @@
                                                 <li class="menu-item-has-children">
                                                     <a href="#">Penelitian & Pengabdian</a>
                                                     <ul class="sub-menu">
-                                                        <li><a href="software-development.html">Pengabdian Masyarakat</a>
-                                                        </li>
-                                                        <li><a href="web-development.html">Panduan Penelitian & Pengabdian</a> </li>
+                                                        <li><a href="<?= base_url('penelitian_pengabdian/panduan_penelitian') ?>">Panduan Penelitian & Pengabdian</a> </li>
+                                                        <li><a href="<?= base_url('penelitian_pengabdian/hasil_penelitian') ?>">Hasil Penelitian & Pengabdian</a></li>
                                                     </ul>
                                                 </li>
                                                 <li class="rs-mega-menu menu-item-has-children"> <a href="#">Kemahasiswaan</a>

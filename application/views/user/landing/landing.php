@@ -9,7 +9,7 @@
                      <div class="sl-desc wow fadeInUp" data-wow-delay="900ms" data-wow-duration="2000ms"> Karya
                          Nyata Untuk UNIBA ! </div>
                      <div class="sl-btn wow fadeInUp" data-wow-delay="200ms" data-wow-duration="3000ms">
-                         <a class="readon learn-more slider-btn" href="about.html">Profile</a>
+                         <a class="readon learn-more slider-btn" href="<?= base_url('profil/visi_misi') ?>">Profile</a>
                      </div>
                  </div>
              </div>
@@ -22,7 +22,7 @@
                      <div class="sl-desc fadeInUp" data-wow-delay="900ms" data-wow-duration="2000ms"> Dengan
                          Semangat Satu </div>
                      <ul class="slider-btn wow fadeInRight" data-wow-delay="200ms" data-wow-duration="3000ms">
-                         <li><a class="readon learn-more slider-btn" href="about.html">Ketahui Kurikulum</a></li>
+                         <li><a class="readon learn-more slider-btn" href="<?= base_url('akademik/pendidikan/kurikulum') ?>">Ketahui Kurikulum</a></li>
                          <li>
                              <div class="slider-video">
                                  <a class="popup-videos" href="https://www.youtube.com/watch?v=atMUy_bPoQI">
@@ -111,10 +111,10 @@
                              <img src="<?= base_url('assets/front/') ?>images/services/main-home/icons/1.png" alt="">
                          </div>
                          <div class="services-content">
-                             <h2 class="title"><a href="software-development.html">Dosen</a></h2>
+                             <h2 class="title"><a href="<?= base_url('profil/sdm/dosen') ?>">Dosen</a></h2>
                              <p class="desc">
                                  <div class="blog-button inner-blog">
-                                     <a class="blog-btn" href="">Selengkapnya</a>
+                                     <a class="blog-btn" href="<?= base_url('profil/sdm/dosen') ?>">Selengkapnya</a>
                                  </div>
                              </p>
                          </div>
@@ -126,10 +126,10 @@
                              <img src="<?= base_url('assets/front/') ?>images/services/main-home/icons/2.png" alt="">
                          </div>
                          <div class="services-content">
-                             <h2 class="title"><a href="web-development.html">Mahasiswa</a></h2>
+                             <h2 class="title"><a href="<?= base_url('akademik/sdm/data_mahasiswa') ?>">Mahasiswa</a></h2>
                              <p class="desc">
                                  <div class="blog-button inner-blog">
-                                     <a class="blog-btn" href="">Selengkapnya</a>
+                                     <a class="blog-btn" href="<?= base_url('akademik/sdm/data_mahasiswa') ?>">Selengkapnya</a>
                                  </div>
                              </p>
                          </div>
@@ -141,10 +141,10 @@
                              <img src="<?= base_url('assets/front/') ?>images/services/main-home/icons/3.png" alt="">
                          </div>
                          <div class="services-content">
-                             <h2 class="title"><a href="analytic-solutions.html">Alumni</a></h2>
+                             <h2 class="title"><a href="<?= base_url('akademik/sdm/data_alumni') ?>">Alumni</a></h2>
                              <p class="desc">
                                  <div class="blog-button inner-blog">
-                                     <a class="blog-btn" href="">Selengkapnya</a>
+                                     <a class="blog-btn" href="<?= base_url('akademik/sdm/data_alumni') ?>">Selengkapnya</a>
                                  </div>
                              </p>
                          </div>
