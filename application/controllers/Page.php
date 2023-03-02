@@ -218,6 +218,17 @@ class Page extends CI_Controller
         $this->load->view('layout/footer');
     }
 
+    public function kurikulum()
+    {
+        $data['title'] = "Sejarah";
+        $data['deskripsi'] = "Sejarah Informatika UNIBA Madura";
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['sejarah'] = $this->muser->getSingleBlog(19)->row_array();
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/akademik/pendidikan/kurikulum', $data);
+        $this->load->view('layout/footer');
+    }
+
     public function mbkm()
     {
         $data['blog'] = $this->muser->getKategori(25)->row_array();

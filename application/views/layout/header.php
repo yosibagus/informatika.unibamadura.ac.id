@@ -146,8 +146,8 @@
                                                                         <li><a href="<?= base_url('akademik/pendidikan/sistem_pendidikan') ?>">Sistem Pendidikan</a></li>
                                                                         <li><a href="<?= base_url('akademik/pendidikan/kalender_akademik') ?>">Kalender Akademik</a></li>
                                                                         <li><a href="">Jadwal Kuliah</a></li>
-                                                                        <li><a href="">SOP Praktikum</a></li>
-                                                                        <li><a href="">Kurikulum</a></li>
+                                                                        <li><a href="<?= base_url('akademik/pendidikan/sop_praktikum') ?>">SOP Praktikum</a></li>
+                                                                        <li><a href="<?= base_url('akademik/pendidikan/kurikulum') ?>">Kurikulum</a></li>
                                                                         <li><a href="<?= base_url('akademik/pendidikan/mbkm') ?>">MBKM</a></li>
                                                                     </ul>
                                                                 </div>
