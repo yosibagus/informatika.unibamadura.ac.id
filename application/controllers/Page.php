@@ -15,8 +15,11 @@ class Page extends CI_Controller
         $data['title'] = "Home";
         $data['deskripsi'] = "Selamat Datang Di Informatika UNIBA Madura";
         $data['informasi'] = $this->muser->getListInformasiLimit(18, 6)->result_array();
+        $data['mhs'] = $this->muser->getJumlahStackholder(36)->row_array();
+        $data['alumni'] = $this->muser->getJumlahStackholder(38)->row_array();
+        $data['dosen'] = $this->db->get('master_dosen')->num_rows();
         $this->load->view('layout/header', $data);
-        $this->load->view('user/landing/landing');
+        $this->load->view('user/landing/landing', $data);
         $this->load->view('layout/footer');
     }
 
@@ -276,6 +279,42 @@ class Page extends CI_Controller
         $this->load->view('layout/footer');
     }
 
+    public function cuti()
+    {
+        $data['blog'] = $this->muser->getKategori(39)->row_array();
+        $data['informasi'] = $this->muser->getListInformasi($data['blog']['id_kategori'])->result_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['title'] = $data['blog']['nama_kategori'];
+        $data['deskripsi'] = $data['blog']['keterangan_kategori'];
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/akademik/prosedur/cuti', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function yudisium()
+    {
+        $data['blog'] = $this->muser->getKategori(40)->row_array();
+        $data['informasi'] = $this->muser->getListInformasi($data['blog']['id_kategori'])->result_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['title'] = $data['blog']['nama_kategori'];
+        $data['deskripsi'] = $data['blog']['keterangan_kategori'];
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/akademik/prosedur/yudisium', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function wisuda()
+    {
+        $data['blog'] = $this->muser->getKategori(41)->row_array();
+        $data['informasi'] = $this->muser->getListInformasi($data['blog']['id_kategori'])->result_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['title'] = $data['blog']['nama_kategori'];
+        $data['deskripsi'] = $data['blog']['keterangan_kategori'];
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/akademik/prosedur/wisuda', $data);
+        $this->load->view('layout/footer');
+    }
+
     public function sempro_skripsi()
     {
         $data['blog'] = $this->muser->getKategori(28)->row_array();
@@ -285,6 +324,18 @@ class Page extends CI_Controller
         $data['deskripsi'] = $data['blog']['keterangan_kategori'];
         $this->load->view('layout/header', $data);
         $this->load->view('user/akademik/prosedur/sempro_skripsi', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function dokumen_akademik()
+    {
+        $data['blog'] = $this->muser->getSingleBlog(20)->row_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['dokumen'] = $this->muser->getAllDokumen()->result_array();
+        $data['title'] = $data['blog']['judul_blog'];
+        $data['deskripsi'] = $data['blog']['sub_blog'];
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/akademik/prosedur/dokumen_akademik');
         $this->load->view('layout/footer');
     }
 

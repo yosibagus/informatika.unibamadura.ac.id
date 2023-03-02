@@ -148,6 +148,7 @@
             // ordering: false,
             // info: false,
         });
+        $('#tableDokumen').DataTable({});
     });
 </script>
 </body>

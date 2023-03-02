@@ -28,5 +28,9 @@ $route['akademik/prosedur/daftar_ulang_krs'] = 'page/daftar_ulang_krs';
 $route['akademik/prosedur/transkip_akademik'] = 'page/transkip_akademik';
 $route['akademik/prosedur/pkl'] = 'page/pkl';
 $route['akademik/prosedur/sempro_skripsi'] = 'page/sempro_skripsi';
+$route['akademik/prosedur/cuti'] = 'page/cuti';
+$route['akademik/prosedur/yudisium'] = 'page/yudisium';
+$route['akademik/prosedur/wisuda'] = 'page/wisuda';
+$route['akademik/prosedur/dokumen_akademik'] = 'page/dokumen_akademik';
 
 $route['kontak'] = 'page/kontak';

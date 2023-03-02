@@ -161,7 +161,7 @@
                                                                         <li><a href="<?= base_url('akademik/prosedur/sempro_skripsi') ?>">Seminar & Sidang Skripsi</a></li>
                                                                         <li><a href="<?= base_url('akademik/prosedur/yudisium') ?>">Yudisium</a></li>
                                                                         <li><a href="<?= base_url('akademik/prosedur/wisuda') ?>">Wisuda</a></li>
-                                                                        <li class="last-item"><a href="onepage7.html">Dukumen Akademik</a></li>
+                                                                        <li class="last-item"><a href="<?= base_url('akademik/prosedur/dokumen_akademik') ?>">Dokumen Akademik</a></li>
                                                                     </ul>
                                                                 </div>
                                                                 <div class="single-megamenu">

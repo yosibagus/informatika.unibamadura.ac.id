@@ -6,10 +6,21 @@ class User_model extends CI_Model
     public function getKategori($id = null)
     {
         if ($id == "") {
+            $this->db->where('id_menu', 3);
             return $this->db->get('master_kategori');
         } else {
             return $this->db->get_where('master_kategori', ['id_kategori' => $id]);
         }
+    }
+
+    public function getAllDokumen()
+    {
+        return $this->db->query("SELECT master_informasi.file_informasi, master_informasi.deskripsi_informasi from master_informasi join master_kategori on master_kategori.id_kategori = master_informasi.id_kategori where master_kategori.id_menu = '4' and master_informasi.file_informasi != ''");
+    }
+
+    public function getJumlahStackholder($id)
+    {
+        return $this->db->query("SELECT sum(deskripsi_informasi) as jumlahStack from master_informasi where id_kategori = '$id'");
     }
 
     public function kategoriNonInformasi()

@@ -10,10 +10,10 @@
                 <div class="col-10">
                     <h1 class="page-title"><?= $blog['nama_kategori'] ?></h1>
                     <ul>
-                        <li title="">
+                        <li title="Braintech - IT Solutions and Technology Startup HTML Template">
                             <a class="active" href="#">Akademik</a>
                         </li>
-                        <li title="">
+                        <li title="Braintech - IT Solutions and Technology Startup HTML Template">
                             <a class="active" href="#">Prosedur Akademik</a>
                         </li>
                         <li><?= $blog['nama_kategori'] ?></li>
@@ -57,11 +57,6 @@
             <div class="col-10">
                 <div class="row">
                     <div class="col-lg-9 md-mb-50">
-                        <!-- <h2>Prosedur</h2> -->
-                        <p style="text-align: justify">
-                            <?= $blog['keterangan_kategori'] ?>
-                        </p>
-
                         <?php foreach ($informasi as $get) : ?>
                             <button class="accordion"><b>> <?= $get['judul_informasi'] ?></b></button>
                             <div class="panel" style="background:#f1f1f1;">

@@ -112,8 +112,11 @@
                          </div>
                          <div class="services-content">
                              <h2 class="title"><a href="software-development.html">Dosen</a></h2>
-                             <p class="desc"> At vero eos et accusamus etiusto odio praesentium accusamus etiusto
-                                 odio data center. </p>
+                             <p class="desc">
+                                 <div class="blog-button inner-blog">
+                                     <a class="blog-btn" href="">Selengkapnya</a>
+                                 </div>
+                             </p>
                          </div>
                      </div>
                  </div>
@@ -124,8 +127,11 @@
                          </div>
                          <div class="services-content">
                              <h2 class="title"><a href="web-development.html">Mahasiswa</a></h2>
-                             <p class="desc"> At vero eos et accusamus etiusto odio praesentium accusamus etiusto
-                                 odio data center. </p>
+                             <p class="desc">
+                                 <div class="blog-button inner-blog">
+                                     <a class="blog-btn" href="">Selengkapnya</a>
+                                 </div>
+                             </p>
                          </div>
                      </div>
                  </div>
@@ -136,8 +142,11 @@
                          </div>
                          <div class="services-content">
                              <h2 class="title"><a href="analytic-solutions.html">Alumni</a></h2>
-                             <p class="desc"> At vero eos et accusamus etiusto odio praesentium accusamus etiusto
-                                 odio data center. </p>
+                             <p class="desc">
+                                 <div class="blog-button inner-blog">
+                                     <a class="blog-btn" href="">Selengkapnya</a>
+                                 </div>
+                             </p>
                          </div>
                      </div>
                  </div>
@@ -162,7 +171,7 @@
                  <div class="counter-list">
                      <div class="counter-text">
                          <div class="count-number">
-                             <span class="rs-count k">0</span>
+                             <span class="rs-count"><?= $dosen ?></span>
                          </div>
                          <h3 class="title">Dosen</h3>
                      </div>
@@ -172,7 +181,7 @@
                  <div class="counter-list">
                      <div class="counter-text">
                          <div class="count-number">
-                             <span class="rs-count plus">0</span>
+                             <span class="rs-count"><?= $mhs['jumlahStack'] ?></span>
                          </div>
                          <h3 class="title">Mahasiswa</h3>
                      </div>
@@ -182,7 +191,7 @@
                  <div class="counter-list">
                      <div class="counter-text">
                          <div class="count-number">
-                             <span class="rs-count plus">0</span>
+                             <span class="rs-count"><?= $alumni['jumlahStack'] ?></span>
                          </div>
                          <h3 class="title">Alumni</h3>
                      </div>
