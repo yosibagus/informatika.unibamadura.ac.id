@@ -239,17 +239,6 @@ class Core extends CI_Controller
         $output = curl_exec($ch);
         curl_close($ch);
         return $output;
-        // $this->load->helper('string');
-
-        // for ($i = 0; $i < count($output); $i++) {
-        //     $result[] = [
-        //         'token_informasi' => random_string('md5'),
-        //         'id_kategori' => 18,
-        //         'judul_informasi' => $output[$i]['judul_informasi'],
-        //     ];
-        // }
-
-        //$this->db->insert_batch('master_informasi', $output);
     }
 
     public function setdata()
@@ -296,6 +285,27 @@ class Core extends CI_Controller
             $message = '';
             echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction($function_number, '$url', '$message');</script>";
         }
+    }
+
+    public function detail_blog()
+    {
+        $id = $this->input->get('id');
+        $data = $this->db->get_where('master_blog', ['id_blog' => $id])->row_array();
+        $html = "";
+        $i = 1;
+        $html .= "<tr>";
+        $html .= "<td>" . $i . "</td>";
+        $html .= "<td>" . $data['judul_blog'] . "</td>";
+        $html .= "<td>" . $data['sub_blog'] . "</td>";
+        $html .= "<td>" . htmlspecialchars($data['deskripsi_blog']) . "</td>";
+        $html .= "<td>" . $data['file_blog'] . "</td>";
+        $html .= "</tr>";
+        echo $html;
+    }
+
+    public function blog_edit()
+    {
+        $data = [];
     }
 }
 

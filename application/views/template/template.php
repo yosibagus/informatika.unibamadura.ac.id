@@ -37,6 +37,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- <script src="https://cdn.ckeditor.com/4.20.2/standard/ckeditor.js"></script> -->
     <script src="<?= base_url('assets/back/ckeditor/ckeditor.js') ?>"></script>
+    <link href="https://cdn.datatables.net/v/bs5/dt-1.13.3/af-2.5.2/datatables.min.css" />
+
+    <script src="https://cdn.datatables.net/v/bs5/dt-1.13.3/af-2.5.2/datatables.min.js"></script>
     <style>
         #vanillatoasts-container {
             position: fixed;
@@ -45,6 +48,14 @@
             width: 320px;
             font-family: 'Helvetica';
             z-index: 1030;
+        }
+
+        .dataTables_filter {
+            float: right;
+        }
+
+        .pagination {
+            float: right;
         }
     </style>
 </head>
@@ -149,7 +160,7 @@
                                                 <?php $data = $this->db->get_where('master_blog', ['id_menu' => $get['id_menu']])->result_array(); ?>
                                                 <?php foreach ($data as $val) : ?>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="<?= base_url('algoritma/#/home') ?>" data-bs-toggle="" aria-expanded="false">
+                                                        <a class="nav-link" href="<?= base_url('algoritma/#/detail_single/') . $val['id_blog'] ?>" data-bs-toggle="" aria-expanded="false">
                                                             <div class="d-flex align-items-center"><span class="nav-link-text"><?= $val['judul_blog'] ?></span></div>
                                                         </a>
                                                     </li>

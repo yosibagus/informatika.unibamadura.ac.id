@@ -23,7 +23,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="table-responsive scrollbar mx-n1 px-1">
-                    <table class="table fs--1 mb-0">
+                    <table class="table fs--1 mb-0" id="mydata">
                         <thead>
                             <tr>
                                 <th class="white-space-nowrap fs--1 align-middle" style="max-width:20px; width:18px;">
@@ -51,19 +51,25 @@
 
 <script>
     $(document).ready(function() {
-        var id = "<?= $data['id_kategori'] ?>";
-        console.log(id);
-        $.ajax({
-            type: "GET",
-            url: "<?= base_url('core/data_kategori_detail') ?>",
-            data: {
-                id: id
-            },
-            dataType: "html",
-            success: function(data) {
-                $("#tmp-detail").html(data);
-            }
-        });
+
+        tampil_data();
+        $('#mydata').dataTable();
+
+        function tampil_data() {
+            var id = "<?= $data['id_kategori'] ?>";
+            $.ajax({
+                type: "GET",
+                url: "<?= base_url('core/data_kategori_detail') ?>",
+                data: {
+                    id: id
+                },
+                async: false,
+                dataType: "html",
+                success: function(data) {
+                    $("#tmp-detail").html(data);
+                }
+            });
+        }
 
     })
 </script>

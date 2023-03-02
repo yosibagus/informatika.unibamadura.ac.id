@@ -1,7 +1,7 @@
 <nav class="mb-2" aria-label="breadcrumb">
     <ol class="breadcrumb mb-0">
         <li class="breadcrumb-item"><a href="#!">Master</a></li>
-        <li class="breadcrumb-item active">Single Blog</li>
+        <li class="breadcrumb-item active"><a href="#!">Master</a></li>
     </ol>
 </nav>
 

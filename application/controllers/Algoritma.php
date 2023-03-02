@@ -35,6 +35,12 @@ class Algoritma extends CI_Controller
         $this->load->view('admin/single/single_blog');
     }
 
+    public function single_edit($id)
+    {
+        $data['blog'] = $this->db->get_where('master_blog', ['id_blog' => $id])->row_array();
+        $this->load->view('admin/single/single_edit', $data);
+    }
+
     public function blog_tambah()
     {
         $this->load->view('admin/single/blog_tambah');
@@ -50,6 +56,12 @@ class Algoritma extends CI_Controller
     {
         $data['data'] = $this->db->get_where('master_kategori', ['kode_kategori' => $id])->row_array();
         $this->load->view('admin/kategori/informasi_tambah', $data);
+    }
+
+    public function detail_single($id)
+    {
+        $data['blog'] = $this->db->get_where('master_blog', ['id_blog' => $id])->row_array();
+        $this->load->view('admin/single/detail_single', $data);
     }
 }
 
