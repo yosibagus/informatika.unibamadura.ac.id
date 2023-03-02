@@ -206,6 +206,18 @@ class Page extends CI_Controller
         $this->load->view('layout/footer');
     }
 
+    public function sop_praktikum()
+    {
+        $data['blog'] = $this->muser->getKategori(31)->row_array();
+        $data['informasi'] = $this->muser->getListInformasi($data['blog']['id_kategori'])->result_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['title'] = $data['blog']['nama_kategori'];
+        $data['deskripsi'] = $data['blog']['keterangan_kategori'];
+        $this->load->view('layout/header', $data);
+        $this->load->view('user/akademik/pendidikan/sop_praktikum', $data);
+        $this->load->view('layout/footer');
+    }
+
     public function mbkm()
     {
         $data['blog'] = $this->muser->getKategori(25)->row_array();
