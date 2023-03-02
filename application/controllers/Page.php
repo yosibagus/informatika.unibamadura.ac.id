@@ -78,8 +78,11 @@ class Page extends CI_Controller
 
     public function sdm_tendik()
     {
-        $data['title'] = "Tenaga Kependidikan";
-        $data['deskripsi'] = "Tenaga Kependidikan Informatika UNIBA Madura";
+        $data['blog'] = $this->muser->getKategori(33)->row_array();
+        $data['informasi'] = $this->muser->getListInformasi($data['blog']['id_kategori'])->result_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['title'] = $data['blog']['nama_kategori'];
+        $data['deskripsi'] = $data['blog']['keterangan_kategori'];
         $this->load->view('layout/header', $data);
         $this->load->view('user/profil/sdm/tendik');
         $this->load->view('layout/footer');
@@ -98,8 +101,11 @@ class Page extends CI_Controller
 
     public function fasilitas()
     {
-        $data['title'] = "Fasilitas";
-        $data['deskripsi'] = "Fasilitas Informatika UNIBA Madura";
+        $data['blog'] = $this->muser->getKategori(23)->row_array();
+        $data['informasi'] = $this->muser->getListInformasi($data['blog']['id_kategori'])->result_array();
+        $data['kategori'] = $this->muser->getKategori()->result_array();
+        $data['title'] = $data['blog']['nama_kategori'];
+        $data['deskripsi'] = $data['blog']['keterangan_kategori'];
         $this->load->view('layout/header', $data);
         $this->load->view('user/profil/fasilitas/fasilitas');
         $this->load->view('layout/footer');
@@ -107,7 +113,7 @@ class Page extends CI_Controller
 
     public function akreditasi()
     {
-        $data['blog'] = $this->muser->getKategori(29)->row_array();
+        $data['blog'] = $this->muser->getKategori(32)->row_array();
         $data['informasi'] = $this->muser->getListInformasi($data['blog']['id_kategori'])->result_array();
         $data['kategori'] = $this->muser->getKategori()->result_array();
         $data['title'] = $data['blog']['nama_kategori'];

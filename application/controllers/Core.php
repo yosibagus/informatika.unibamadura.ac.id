@@ -154,7 +154,7 @@ class Core extends CI_Controller
     public function informasi_tambah($id)
     {
         $config['upload_path']          = './assets/foto/informasi/';
-        $config['allowed_types']        = 'gif|jpg|png|pdf|docx|doc|xls';
+        $config['allowed_types']        = 'gif|jpg|jpeg|png|pdf|docx|doc|xls';
         $config['max_width']            = 5024;
         $tgl = $this->input->post('tgl_informasi');
 
@@ -170,7 +170,7 @@ class Core extends CI_Controller
                 'judul_informasi' => $this->input->post('judul_informasi'),
                 'deskripsi_informasi' => $this->input->post('deskripsi_informasi'),
                 'tgl_informasi' => $tgl == '' ? date('d-m-y') : $tgl,
-                'isi_informasi' => $this->input->post('isi_informasi'),
+                'isi_informasi' => $this->input->post('informasi'),
                 'file_informasi' => '',
                 'tipefile_informasi' => '',
                 'id_akses' => 1

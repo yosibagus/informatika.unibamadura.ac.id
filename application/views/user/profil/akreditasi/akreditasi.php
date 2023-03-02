@@ -32,12 +32,25 @@
                             <table class="table table-hover">
                                 <thead>
                                     <tr style="background:#03228f; color:#fff;">
-                                        <th>No.</th>
-                                        <th>Akreditasi</th>
+                                        <th width="10">No.</th>
+                                        <th class="text-center">Akreditasi</th>
                                         <th>No SK</th>
                                         <th>Masa Berlaku sampai</th>
+                                        <th>Unduhan</th>
                                     </tr>
                                 </thead>
+                                <tbody>
+                                    <?php $i = 1;
+                                    foreach ($informasi as $get) : ?>
+                                        <tr>
+                                            <td><?= $i++; ?></td>
+                                            <td class="text-center"><?= $get['judul_informasi']; ?></td>
+                                            <td><?= $get['deskripsi_informasi']; ?></td>
+                                            <td><?= $get['isi_informasi']; ?></td>
+                                            <td><a href="<?= base_url('assets/foto/informasi/') . $get['file_informasi'] ?>" class="badge badge-primary">Unduh</a></td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
                             </table>
                         </div>
                     </div>
@@ -65,20 +78,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            this.classList.toggle("activet");
-            var panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
-            } else {
-                panel.style.display = "block";
-            }
-        });
-    }
-</script>
