@@ -72,6 +72,22 @@ class Algoritma extends CI_Controller
         $data['detail'] = $this->mcore->getDetailInformasi($token)->row_array();
         $this->load->view('admin/kategori/informasi_edit', $data);
     }
+
+    public function dosen()
+    {
+        $this->load->view('admin/dosen/dosen_list');
+    }
+
+    public function dosen_tambah()
+    {
+        $this->load->view('admin/dosen/dosen_tambah');
+    }
+
+    public function dosen_edit($id)
+    {
+        $data['dosen'] = $this->db->get_where('master_dosen', ['id_dosen' => $id])->row_array();
+        $this->load->view('admin/dosen/dosen_edit', $data);
+    }
 }
 
 /* End of file Admin.php and path \application\controllers\Admin.php */

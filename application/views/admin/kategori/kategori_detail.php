@@ -34,7 +34,8 @@
                                 <th class="sort align-middle ps-4" scope="col" data-sort="vendor" style="width:200px;">Deskripsi</th>
                                 <th class="sort align-middle ps-4" scope="col" data-sort="vendor" style="width:200px;">Vendor</th>
                                 <th class="sort align-middle ps-4" scope="col" data-sort="vendor" style="width:200px;">File</th>
-                                <th class="sort align-middle ps-4" scope="col" data-sort="time" style="width:50px;">Publish</th>
+                                <th class="sort align-middle ps-4" scope="col" data-sort="time" style="width:50px;">Tgl</th>
+                                <th class="sort align-middle ps-4" scope="col" data-sort="time" style="width:50px;">Status</th>
                                 <th class="sort text-end align-middle pe-0 ps-4" scope="col"></th>
                             </tr>
                         </thead>

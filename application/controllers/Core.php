@@ -204,6 +204,7 @@ class Core extends CI_Controller
         $data = $this->mcore->getListDetailKategori($id)->result_array();
         $i = 1;
         foreach ($data as $get) {
+            $status = $get['status_informasi'] == 1 ? "Aktif" : "Non Aktif";
             echo '<tr class="hover-actions-trigger btn-reveal-trigger position-static">
             <td class="fs--1 align-middle">
                 ' . $i++ . '
@@ -215,10 +216,11 @@ class Core extends CI_Controller
                 ' . $get['deskripsi_informasi'] . '
             </td>
             <td class="tags align-middle review pb-2 ps-4" style="min-width:225px;">
-                ...
+                Admin
             </td>
-            <td class="time align-middle white-space-nowrap text-600 ps-4">' . $get['file_informasi'] . '</td>
+            <td class="time align-middle white-space-nowrap text-600 ps-4"><a target="blank" href="' . base_url('assets/foto/informasi/') . $get['file_informasi'] . '">' . $get['file_informasi'] . '</a></td>
             <td class="time align-middle white-space-nowrap text-600 ps-4">' . $get['tgl_informasi'] . '</td>
+            <td class="time align-middle white-space-nowrap text-600 ps-4">' . $status . '</td>
             <td class="align-middle white-space-nowrap text-end pe-0 ps-4">
                 <div class="position-relative">
                     <div class="hover-actions"><button class="btn btn-sm btn-phoenix-secondary me-1 fs--2"><span class="fas fa-check"></span></button><button class="btn btn-sm btn-phoenix-secondary fs--2"><span class="fas fa-trash"></span></button></div>
@@ -377,6 +379,98 @@ class Core extends CI_Controller
 
         $this->db->where('id_informasi', $id);
         $this->db->update('master_informasi', $input);
+
+        echo json_encode($input);
+    }
+
+    public function data_dosen()
+    {
+        $data = $this->db->get('master_dosen')->result_array();
+        $i = 1;
+        $html = "";
+        foreach ($data as $get) {
+            $html .= "<tr>";
+            $html .= "<td>" . $i++ . "</td>";
+            $html .= "<td>" . $get['nama_dosen'] . "</td>";
+            $html .= "<td>" . $get['nip_dosen'] . "</td>";
+            $html .= "<td>" . $get['jabatan'] . "</td>";
+            $html .= "<td>
+                        <a href='" . base_url('core/delete/') . $get['id_dosen'] . "' class='badge bg-danger'><i class='fa fa-trash'></i></a>
+                        <a href='" . base_url('algoritma/#/dosen_edit/') . $get['id_dosen'] . "' class='badge bg-info'><i class='fa fa-pencil'></i></a>
+                     </td>";
+            $html .= "</tr>";
+        }
+        echo $html;
+    }
+
+    public function delete($id_dosen)
+    {
+        $this->db->where('id_dosen', $id_dosen);
+        $this->db->delete('master_dosen');
+        redirect("algoritma/#/dosen");
+    }
+
+    public function dosen_tambah()
+    {
+        $config['upload_path']          = './assets/foto';
+        $config['allowed_types']        = 'gif|jpg|jpeg|png|pdf|docx|doc|xls';
+        $config['max_width']            = 5024;
+
+        $this->load->library('upload', $config);
+        $this->load->helper('string');
+
+        if (!$this->upload->do_upload('foto_dosen')) {
+            $data = array('error' => $this->upload->display_errors());
+            $input = [
+                'nip_dosen' => $this->input->post('nik_dosen'),
+                'nama_dosen' => $this->input->post('nama_dosen'),
+                'jabatan' => $this->input->post('jabatan'),
+                'foto_dosen' => 'default.png',
+            ];
+        } else {
+            $data = $this->upload->data();
+            $input = [
+                'nip_dosen' => $this->input->post('nik_dosen'),
+                'nama_dosen' => $this->input->post('nama_dosen'),
+                'jabatan' => $this->input->post('jabatan'),
+                'foto_dosen' => $data['file_name'],
+            ];
+        }
+
+        $this->db->insert('master_dosen', $input);
+
+        echo json_encode($input);
+    }
+
+    public function dosen_edit()
+    {
+        $config['upload_path']          = './assets/foto';
+        $config['allowed_types']        = 'gif|jpg|jpeg|png|pdf|docx|doc|xls';
+        $config['max_width']            = 5024;
+
+        $this->load->library('upload', $config);
+        $this->load->helper('string');
+
+        if (!$this->upload->do_upload('foto_dosen')) {
+            $data = array('error' => $this->upload->display_errors());
+            $input = [
+                'nip_dosen' => $this->input->post('nik_dosen'),
+                'nama_dosen' => $this->input->post('nama_dosen'),
+                'jabatan' => $this->input->post('jabatan')
+            ];
+        } else {
+            $data = $this->upload->data();
+            $input = [
+                'nip_dosen' => $this->input->post('nik_dosen'),
+                'nama_dosen' => $this->input->post('nama_dosen'),
+                'jabatan' => $this->input->post('jabatan'),
+                'foto_dosen' => $data['file_name'],
+            ];
+        }
+        $id = $this->input->post('id_dosen');
+
+        $this->db->where('id_dosen', $id);
+        $this->db->update('master_dosen', $input);
 
         echo json_encode($input);
     }

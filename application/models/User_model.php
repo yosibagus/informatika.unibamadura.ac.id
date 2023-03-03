@@ -54,6 +54,7 @@ class User_model extends CI_Model
         $this->db->from('master_kategori');
         $this->db->join('master_informasi', 'master_kategori.id_kategori = master_informasi.id_kategori', 'left');
         $this->db->where('master_informasi.id_kategori', $kode_kategori);
+        $this->db->where('master_informasi.status_informasi', 1);
         $this->db->order_by('master_informasi.tgl_informasi', 'desc');
         return $this->db->get();
     }

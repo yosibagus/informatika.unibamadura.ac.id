@@ -134,6 +134,17 @@
                                     </div>
                                 </a>
                             </div>
+                            <div class="nav-item-wrapper">
+                                <a class="nav-link label-1" href="<?= base_url('algoritma/#/dosen') ?>" role="button" data-bs-toggle="" aria-expanded="false">
+                                    <div class="d-flex align-items-center">
+                                        <span class="nav-link-icon">
+                                            <span data-feather="users"></span>
+                                        </span>
+                                        <span class="nav-link-text-wrapper"><span class="nav-link-text">Dosen</span>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
 
                             <li class="nav-item">
                                 <p class="navbar-vertical-label">Main Menu</p>

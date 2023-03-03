@@ -86,7 +86,7 @@
                              tersebut, serta menampilkan dalam bentuk informasi. </div>
                      </div>
                      <div class="btn-part">
-                         <a class="readon learn-more contact-us" href="<?= base_url('profil/visi_misi') ?>">Learn More</a>
+                         <a class="readon learn-more contact-us" href="<?= base_url('profil/visi_misi') ?>">Selengkapnya</a>
                      </div>
                  </div>
              </div>
@@ -212,9 +212,9 @@
                          <h2 class="title white-color"> Peluang Kerja Dalam Program Studi Informatika UNIBA
                              Madura </h2>
                      </div>
-                     <div class="btn-part mt-40">
+                     <!-- <div class="btn-part mt-40">
                          <a class="readon learn-more contact-us" href="#">Contact Us</a>
-                     </div>
+                     </div> -->
                  </div>
              </div>
              <div class="col-lg-8 pl-30 md-pl-15">
@@ -292,18 +292,18 @@
              <?php foreach ($informasi as $get) : ?>
                  <div class="blog-item">
                      <div class="image-wrap">
-                         <a href="blog-details.html"><img src="<?= base_url('assets/foto/informasi/') . $get['file_informasi'] ?>" alt=""></a>
+                         <a href="<?= base_url('page/detail/') . $get['token_informasi'] ?>"><img src="<?= base_url('assets/foto/informasi/') . $get['file_informasi'] ?>" alt=""></a>
                          <ul class="post-categories">
-                             <li><a href="blog-details.html">Software Development</a></li>
+                             <li><a href="<?= base_url('page/detail/') . $get['token_informasi'] ?>">Berita</a></li>
                          </ul>
                      </div>
                      <div class="blog-content">
                          <ul class="blog-meta">
-                             <li class="date"><i class="fa fa-calendar-check-o"></i> 16 Nov 2020</li>
+                             <li class="date"><i class="fa fa-calendar-check-o"></i> <?= $get['tgl_informasi'] ?></li>
                              <li class="admin"><i class="fa fa-user-o"></i> admin</li>
                          </ul>
-                         <h3 class="blog-title"><a href="blog-details.html"><?= $get['judul_informasi'] ?></a></h3>
-                         <div class="blog-button"><a href="blog-details.html">Learn More</a></div>
+                         <h3 class="blog-title"><a href="<?= base_url('page/detail/') . $get['token_informasi'] ?>"><?= $get['judul_informasi'] ?></a></h3>
+                         <div class="blog-button"><a href="<?= base_url('page/detail/') . $get['token_informasi'] ?>">Selengkapnya</a></div>
                      </div>
                  </div>
              <?php endforeach; ?>
