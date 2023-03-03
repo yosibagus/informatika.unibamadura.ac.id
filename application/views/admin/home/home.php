@@ -6,10 +6,10 @@
                 <h5 class="text-700 fw-semi-bold">Karya Nyata Untuk UNIBA !!!</h5>
             </div>
             <div class="alert alert-info alert-dismissible fade show text-white mb-4 " role="alert" style="font-size:13px">
-                <strong>Halo Yosi!</strong> Selamat datang di Ruang Algoritma Informatika Universitas Bahaudin Mudhary Madura, Silahkan tuangkan fikiran anda dalam tulisan.
+                <strong>Halo!</strong> Selamat datang di Ruang Algoritma Informatika Universitas Bahaudin Mudhary Madura, Silahkan tuangkan fikiran anda dalam tulisan.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-            <div class="row align-items-center g-4">
+            <!-- <div class="row align-items-center g-4">
                 <div class="col-12 col-md-auto">
                     <div class="d-flex align-items-center"><img src="<?= base_url('assets/back/') ?>assets/img/icons/illustrations/4l.png" alt="" height="46" width="46" />
                         <div class="ms-3">
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <hr class="bg-200 mb-6 mt-4" />
         </div>
     </div>
