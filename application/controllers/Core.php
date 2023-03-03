@@ -171,8 +171,8 @@ class Core extends CI_Controller
                 'deskripsi_informasi' => $this->input->post('deskripsi_informasi'),
                 'tgl_informasi' => $tgl == '' ? date('d-m-y') : $tgl,
                 'isi_informasi' => $this->input->post('informasi'),
-                'file_informasi' => '',
-                'tipefile_informasi' => '',
+                'file_informasi' => 'default.png',
+                'tipefile_informasi' => 'png',
                 'id_akses' => 1
             ];
         } else {
@@ -223,16 +223,26 @@ class Core extends CI_Controller
             <td class="time align-middle white-space-nowrap text-600 ps-4">' . $status . '</td>
             <td class="align-middle white-space-nowrap text-end pe-0 ps-4">
                 <div class="position-relative">
-                    <div class="hover-actions"><button class="btn btn-sm btn-phoenix-secondary me-1 fs--2"><span class="fas fa-check"></span></button><button class="btn btn-sm btn-phoenix-secondary fs--2"><span class="fas fa-trash"></span></button></div>
+                    <div class="hover-actions">
+                    <a href="' . base_url('core/delete_informasi/') . $get['id_informasi'] . '" class="btn btn-sm btn-phoenix-secondary fs--2"><span class="fas fa-trash"></span></a></div>
                 </div>
                 <div class="font-sans-serif btn-reveal-trigger position-static"><button class="btn btn-sm dropdown-toggle dropdown-caret-none transition-none btn-reveal fs--2" type="button" data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><span class="fas fa-ellipsis-h fs--2"></span></button>
-                    <div class="dropdown-menu dropdown-menu-end py-2"><a class="dropdown-item" href="' . base_url('algoritma/#/sub_kategori/')  . '">Tambah Sub Kategori</a>
+                    <div class="dropdown-menu dropdown-menu-end py-2">
+                    <a class="dropdown-item" href="' . base_url('algoritma/#/informasi_detail/') . $get['token_informasi']  . '">Detail</a>
                         <div class="dropdown-divider"></div><a class="dropdown-item text-danger" href="#!">Remove</a>
                     </div>
                 </div>
             </td>
             </tr>';
         }
+        // <button class="btn btn-sm btn-phoenix-secondary me-1 fs--2"><span class="fas fa-check"></span></button>
+    }
+
+    public function delete_informasi($id)
+    {
+        $this->db->where('id_informasi', $id);
+        $this->db->delete('master_informasi');
+        echo "<script>window.history.go(-1);</script>";
     }
 
     public function setup_data($url)
@@ -255,7 +265,7 @@ class Core extends CI_Controller
         foreach ($rest['data'] as $get) {
             $result[] = [
                 'token_informasi' => random_string('md5'),
-                'id_kategori' => 18,
+                'id_kategori' => 19,
                 'judul_informasi' => $get['judul_informasi'],
                 'lokasi_informasi' => "UNIBA MADURA",
                 'deskripsi_informasi' => $get['deskripsi_informasi'],
@@ -263,8 +273,8 @@ class Core extends CI_Controller
                 'tgl_informasi' => $get['tgl_informasi'],
                 'id_akses' => 1,
                 'status_informasi' => 1,
-                'file_informasi' => $get['file_informasi'],
-                'tipefile_informasi' => '.jpg'
+                'file_informasi' => 'default.png',
+                'tipefile_informasi' => '.png'
             ];
         }
 
