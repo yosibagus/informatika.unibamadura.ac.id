@@ -31,9 +31,9 @@
                 <div class="col-lg-3 col-md-12 col-sm-12 pl-45 md-pl-15 md-mb-30">
                     <h3 class="widget-title">Link Terkait</h3>
                     <ul class="site-map">
-                        <li><a href="software-development.html">UNIBA Madura</a></li>
-                        <li><a href="web-development.html">SIAKAD UNIBA Madura</a></li>
-                        <li><a href="analytic-solutions.html">Virtual Tour</a></li>
+                        <li><a href="https://unibamadura.ac.id/">UNIBA Madura</a></li>
+                        <li><a href="#">SIAKAD UNIBA Madura</a></li>
+                        <li><a target="blank" href="https://virtualtour.unibamadura.ac.id/">Virtual Tour</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-12 col-sm-12 md-mb-30">

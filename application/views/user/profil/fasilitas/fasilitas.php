@@ -35,7 +35,7 @@
                                         <div class="blog-img">
                                             <a href="blog-details.html"><img src="<?= base_url('assets/foto/informasi/') . $get['file_informasi'] ?>" alt=""></a>
                                             <ul class="post-categories">
-                                                <li><a href="blog-details.html">Application Testing</a></li>
+                                                <!-- <li><a href="blog-details.html">Application Testing</a></li> -->
                                             </ul>
                                         </div>
                                         <div class="blog-content">
