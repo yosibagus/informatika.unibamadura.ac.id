@@ -26,7 +26,11 @@ class Core_model extends CI_Model
 
     public function getListDetailKategori($id)
     {
-        return $this->db->get_where('master_informasi', ['id_kategori' => $id]);
+        $this->db->select('*');
+        $this->db->from('master_informasi');
+        $this->db->where('id_kategori', $id);
+        $this->db->order_by('tgl_informasi', 'desc');
+        return $this->db->get();
     }
 
     public function getDetailInformasi($token)
