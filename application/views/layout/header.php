@@ -10,7 +10,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Yosi Bagus Sadar Rasuli" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.html">
+    <link rel="apple-touch-icon" href="">
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('assets/front/') ?>logo/informatika.png">
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/front/') ?>css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/front/') ?>css/font-awesome.min.css">
@@ -48,14 +48,14 @@
                 <div class="topbar-area style2">
                     <div class="container-fluid">
                         <div class="row y-middle">
-                            <div class="col-lg-8">
+                            <div class="col-lg-6">
                                 <ul class="topbar-contact">
                                     <li>
                                         <i class="flaticon-email"></i>
                                         <a href="mailto:informatika@unibamadura.ac.id">informatika@unibamadura.ac.id</a>
                                     </li>
                                     <li>
-                                        <i class="flaticon-location"></i> Jl. Raya Lenteng, Aredake, Kec. Batuan, Kab.
+                                        <i class="flaticon-location"></i> Jl. Raya Lenteng, No.10, Kec. Batuan, Kab.
                                         Sumenep
                                     </li>
                                 </ul>
@@ -71,6 +71,15 @@
                                     </ul>
                                 </div>
                             </div>
+                            <div class="col-lg-2">
+                                <div id="google_element"></div>
+                                <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+                                <script>
+                                    function loadGoogleTranslate() {
+                                        new google.translate.TranslateElement("google_element");
+                                    }
+                                </script>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -78,8 +87,8 @@
                 <!-- Menu Start -->
                 <div class="menu-area menu-sticky">
                     <div class="container-fluid">
-                        <div class="row align-items-center">
-                            <div class="col-lg-2">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-lg-1">
                                 <div class="logo-part">
                                     <a href="<?= base_url() ?>"><img src="<?= base_url('assets/front/') ?>logo/uniba_informatika.png" alt=""></a>
                                 </div>
@@ -89,13 +98,13 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-10 text-right">
+                            <div class="col-lg-11 text-right">
                                 <div class="rs-menu-area">
                                     <div class="main-menu">
                                         <nav class="rs-menu pr-100 lg-pr-50 md-pr-0">
                                             <ul class="nav-menu">
                                                 <li>
-                                                    <a href="<?= base_url() ?>">Home</a>
+                                                    <a href="<?= base_url() ?>">Beranda</a>
                                                 </li>
                                                 <li class="menu-item-has-children">
                                                     <a href="#">Profil</a>

@@ -32,6 +32,8 @@
                     <h3 class="widget-title">Link Terkait</h3>
                     <ul class="site-map">
                         <li><a href="https://unibamadura.ac.id/">UNIBA Madura</a></li>
+                        <li><a href="https://fst.unibamadura.ac.id/">Fakultas Sains & Teknologi</a></li>
+                        <li><a href="https://pmb.unibamadura.ac.id/">PMB UNIBA Madura</a></li>
                         <li><a href="#">SIAKAD UNIBA Madura</a></li>
                         <li><a target="blank" href="https://virtualtour.unibamadura.ac.id/">Virtual Tour</a></li>
                     </ul>
@@ -41,18 +43,18 @@
                     <ul class="address-widget">
                         <li>
                             <i class="flaticon-location"></i>
-                            <div class="desc">Jl. Raya Lenteng, Aredake, Kec. Batuan, Kab. Sumenep</div>
+                            <div class="desc">Jl. Raya Lenteng, No.10, Kecamatan. Batuan, Kabupaten. Sumenep</div>
                         </li>
                         <li>
                             <i class="flaticon-email"></i>
                             <div class="desc">
-                                <a href="mailto:support@rstheme.com">informatika@unibamadura.ac.id</a>
+                                <a href="mailto:informatika@unibamadura.ac.id">informatika@unibamadura.ac.id</a>
                             </div>
                         </li>
-                        <li>
+                        <!-- <li>
                             <i class="flaticon-clock-1"></i>
                             <div class="desc"> 24 Jam x 7 </div>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-12 col-sm-12">

@@ -7,6 +7,11 @@ class Algoritma extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+
+        $id = $this->session->userdata('id_akses');
+        if (empty($id)) {
+            redirect('auth');
+        }
         $this->load->model('Core_model', 'mcore');
     }
 
