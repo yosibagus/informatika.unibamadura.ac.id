@@ -1,8 +1,8 @@
 <nav class="mb-2" aria-label="breadcrumb">
     <ol class="breadcrumb mb-0">
         <li class="breadcrumb-item"><a href="#">Master</a></li>
-        <li class="breadcrumb-item"><a href="#">Single Blog</a></li>
-        <li class="breadcrumb-item"><a href="#"><?= $blog['judul_blog'] ?></a></li>
+        <li class="breadcrumb-item"><a href="#/single_blog">Single Blog</a></li>
+        <li class="breadcrumb-item"><a href="#/detail_single/<?= $blog['id_blog'] ?>"><?= $blog['judul_blog'] ?></a></li>
         <li class="breadcrumb-item active"><?= $blog['sub_blog'] ?></li>
     </ol>
 </nav>
@@ -85,7 +85,6 @@
                 contentType: false,
                 cache: false,
                 success: function(data) {
-                    // alert(data);
                     VanillaToasts.create({
                         title: 'Ruang Algoritma',
                         text: 'Berhasil Di Update',

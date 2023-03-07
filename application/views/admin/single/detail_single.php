@@ -45,8 +45,6 @@
                 id: id
             },
             success: function(data) {
-                console.log(data);
-
                 $("#tmp-sejarah").html(data);
             }
         })

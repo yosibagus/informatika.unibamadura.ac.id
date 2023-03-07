@@ -52,7 +52,6 @@
             url: "<?= base_url('core/data_blog') ?>",
             dataType: "html",
             success: function(data) {
-                // console.log(data);
                 $("#tmp-blog").html(data);
             }
         })
